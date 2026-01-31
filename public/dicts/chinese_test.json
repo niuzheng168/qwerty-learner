@@ -1,172 +1,137 @@
 [
     {
         "name": "谢谢",
-        "trans": [
-            "thank you"
-        ]
+        "trans": ["thank you"],
+        "notation": "谢(xiè)谢(xie)"
     },
     {
         "name": "对不起",
-        "trans": [
-            "sorry"
-        ]
+        "trans": ["sorry"],
+        "notation": "对(duì)不(bù)起(qǐ)"
     },
     {
         "name": "再见",
-        "trans": [
-            "goodbye"
-        ]
+        "trans": ["goodbye"],
+        "notation": "再(zài)见(jiàn)"
     },
     {
         "name": "喜欢",
-        "trans": [
-            "like"
-        ]
+        "trans": ["like"],
+        "notation": "喜(xǐ)欢(huān)"
     },
     {
         "name": "爱",
-        "trans": [
-            "love"
-        ]
+        "trans": ["love"],
+        "notation": "爱(ài)"
     },
     {
         "name": "好的",
-        "trans": [
-            "okay",
-            "alright"
-        ]
+        "trans": ["okay", "alright"],
+        "notation": "好(hǎo)的(de)"
     },
     {
         "name": "是的",
-        "trans": [
-            "yes"
-        ]
+        "trans": ["yes"],
+        "notation": "是(shì)的(de)"
     },
     {
         "name": "不",
-        "trans": [
-            "no"
-        ]
+        "trans": ["no"],
+        "notation": "不(bù)"
     },
     {
         "name": "可能",
-        "trans": [
-            "maybe",
-            "perhaps"
-        ]
+        "trans": ["maybe", "perhaps"],
+        "notation": "可(kě)能(néng)"
     },
     {
         "name": "真的吗",
-        "trans": [
-            "really",
-            "seriously"
-        ]
+        "trans": ["really", "seriously"],
+        "notation": "真(zhēn)的(de)吗(ma)"
     },
     {
         "name": "不用谢",
-        "trans": [
-            "you're welcome"
-        ]
+        "trans": ["you're welcome"],
+        "notation": "不(bú)用(yòng)谢(xiè)"
     },
     {
         "name": "对的",
-        "trans": [
-            "right",
-            "correct"
-        ]
+        "trans": ["right", "correct"],
+        "notation": "对(duì)的(de)"
     },
     {
         "name": "错的",
-        "trans": [
-            "wrong",
-            "incorrect"
-        ]
+        "trans": ["wrong", "incorrect"],
+        "notation": "错(cuò)的(de)"
     },
     {
         "name": "好久不见",
-        "trans": [
-            "long time no see"
-        ]
+        "trans": ["long time no see"],
+        "notation": "好(hǎo)久(jiǔ)不(bú)见(jiàn)"
     },
     {
         "name": "加油",
-        "trans": [
-            "come on",
-            "let's go"
-        ]
+        "trans": ["come on", "let's go"],
+        "notation": "加(jiā)油(yóu)"
     },
     {
         "name": "放心",
-        "trans": [
-            "rest assured",
-            "don't worry"
-        ]
+        "trans": ["rest assured", "don't worry"],
+        "notation": "放(fàng)心(xīn)"
     },
     {
         "name": "好吃",
-        "trans": [
-            "delicious",
-            "tasty"
-        ]
+        "trans": ["delicious", "tasty"],
+        "notation": "好(hǎo)吃(chī)"
     },
     {
         "name": "好玩",
-        "trans": [
-            "fun",
-            "entertaining"
-        ]
+        "trans": ["fun", "entertaining"],
+        "notation": "好(hǎo)玩(wán)"
     },
     {
         "name": "好看",
-        "trans": [
-            "good-looking",
-            "beautiful"
-        ]
+        "trans": ["good-looking", "beautiful"],
+        "notation": "好(hǎo)看(kàn)"
     },
     {
         "name": "难过",
-        "trans": [
-            "sad",
-            "upset"
-        ]
+        "trans": ["sad", "upset"],
+        "notation": "难(nán)过(guò)"
     },
     {
         "name": "高兴",
-        "trans": [
-            "happy",
-            "glad"
-        ]
+        "trans": ["happy", "glad"],
+        "notation": "高(gāo)兴(xìng)"
     },
     {
         "name": "累了",
-        "trans": [
-            "tired",
-            "exhausted"
-        ]
+        "trans": ["tired", "exhausted"],
+        "notation": "累(lèi)了(le)"
     },
     {
         "name": "干杯",
-        "trans": [
-            "cheers"
-        ]
+        "trans": ["cheers"],
+        "notation": "干(gān)杯(bēi)"
     },
     {
         "name": "好的主意",
-        "trans": [
-            "good idea"
-        ]
+        "trans": ["good idea"],
+        "notation": "好(hǎo)的(de)主(zhǔ)意(yì)"
     },
     {
         "name": "祝福",
-        "trans": [
-            "blessing",
-            "wishing well"
-        ]
+        "trans": ["blessing", "wishing well"],
+        "notation": "祝(zhù)福(fú)"
     },
     {
         "name": "恭喜",
-        "trans": [
-            "congratulations"
-        ]
+        "trans": ["congratulations"],
+        "notation": "恭(gōng)喜(xǐ)"
+    },
+    {
+        "name": "你好",
+        "trans": ["hello"],
+        "notation": "你(nǐ)好(hǎo)"
     }
 ]

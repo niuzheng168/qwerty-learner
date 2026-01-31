@@ -4169,15 +4169,18 @@ export const dictionaryResources: DictionaryResource[] = [
   ...kazakhHapinDicts,
   ...indonesianDicts,
 
-  // {
-  //   id: 'zhtest',
-  //   name: '中文测试',
-  //   description: '中文测试词库',
-  //   category: '测试',
-  //   url: '/dicts/chinese_test.json',
-  //   length: 27,
-  //   language: 'zh',
-  // },
+  {
+    id: 'zhtest',
+    name: '中文测试',
+    description: '中文测试词库',
+    category: '中文学习',
+    tags: ['测试', '基础'],
+    url: '/dicts/chinese_test.json',
+    length: 27,
+    language: 'zh',
+    languageCategory: 'zh',
+  },
+
   // {
   //   id: 'jptest',
   //   name: '日文测试',
