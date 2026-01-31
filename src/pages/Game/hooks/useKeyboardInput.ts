@@ -1,4 +1,4 @@
-import { useEffect, useCallback } from 'react'
+import { useCallback, useEffect } from 'react'
 
 export function useKeyboardInput(onKeyPress: (key: string) => void, isActive: boolean) {
   const handleKeyDown = useCallback(
