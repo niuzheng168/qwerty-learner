@@ -9,16 +9,19 @@ import zhFlag from '@/assets/flags/zh.png'
 import type { LanguageCategoryType } from '@/typings'
 import { RadioGroup } from '@headlessui/react'
 import { useCallback, useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export type LanguageTabOption = {
-  id: LanguageCategoryType
+  id: LanguageCategoryType | 'game'
   name: string
   flag: string
+  isGame?: boolean
 }
 
 const options: LanguageTabOption[] = [
   { id: 'en', name: '英语', flag: enFlag },
   { id: 'zh', name: '中文', flag: zhFlag },
+  { id: 'game', name: 'Game', flag: '', isGame: true },
   { id: 'ja', name: '日语', flag: jpFlag },
   { id: 'de', name: '德语', flag: deFlag },
   { id: 'kk', name: '哈萨克语', flag: kkFlag },
@@ -29,14 +32,19 @@ const options: LanguageTabOption[] = [
 export function LanguageTabSwitcher() {
   // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   const { state, setState } = useContext(GalleryContext)!
+  const navigate = useNavigate()
 
   const onChangeTab = useCallback(
     (tab: string) => {
+      if (tab === 'game') {
+        navigate('/game')
+        return
+      }
       setState((draft) => {
         draft.currentLanguageTab = tab as LanguageCategoryType
       })
     },
-    [setState],
+    [setState, navigate],
   )
 
   return (
@@ -45,8 +53,12 @@ export function LanguageTabSwitcher() {
         {options.map((option) => (
           <RadioGroup.Option key={option.id} value={option.id} className="cursor-pointer">
             {({ checked }) => (
-              <div className={`flex items-center border-b-2 px-2 pb-1 ${checked ? 'border-indigo-500' : 'border-transparent'}`}>
-                <img src={option.flag} className="mr-1.5 h-7 w-7" />
+              <div
+                className={`flex items-center border-b-2 px-2 pb-1 ${
+                  checked && !option.isGame ? 'border-indigo-500' : 'border-transparent'
+                }`}
+              >
+                {option.isGame ? <span className="mr-1.5 text-xl">🎮</span> : <img src={option.flag} className="mr-1.5 h-7 w-7" />}
                 <p className={`text-lg font-medium text-gray-700 dark:text-gray-200`}>{option.name}</p>
               </div>
             )}
