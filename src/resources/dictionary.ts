@@ -4180,6 +4180,17 @@ export const dictionaryResources: DictionaryResource[] = [
     language: 'zh',
     languageCategory: 'zh',
   },
+  {
+    id: 'zh-poetry',
+    name: '古诗',
+    description: '经典古诗词',
+    category: '中文学习',
+    tags: ['古诗', '经典'],
+    url: '/dicts/chinese_poetry.json',
+    length: 16,
+    language: 'zh',
+    languageCategory: 'zh',
+  },
 
   // {
   //   id: 'jptest',

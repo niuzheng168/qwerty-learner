@@ -3,6 +3,7 @@ import { useMemo } from 'react'
 
 type NotationProps = {
   notation: string
+  pinyinOnly?: boolean
 }
 
 type NotationInfo = {
@@ -10,8 +11,22 @@ type NotationInfo = {
   phonetic?: string
 }
 
-export default function Notation({ notation }: NotationProps) {
+export default function Notation({ notation, pinyinOnly = false }: NotationProps) {
   const infos: NotationInfo[] = useMemo(() => getNotationInfo(notation), [notation])
+
+  // For Chinese (pinyinOnly mode): show only pinyin without characters
+  if (pinyinOnly) {
+    return (
+      <div className="mx-auto flex h-10 items-end">
+        <span className="mb-1 p-0 font-mono text-2xl text-gray-500 dark:text-gray-400">
+          {infos.map(({ phonetic }, index) => (
+            <span key={index}>{phonetic} </span>
+          ))}
+        </span>
+      </div>
+    )
+  }
+
   return (
     <div className="mx-auto flex h-20 items-end">
       <ruby className="mb-1 p-0 font-mono text-5xl text-gray-800 dark:text-opacity-80">

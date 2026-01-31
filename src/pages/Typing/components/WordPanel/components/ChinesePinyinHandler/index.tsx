@@ -1,7 +1,48 @@
 import type { WordUpdateAction } from '../InputHandler'
 import { TypingContext } from '@/pages/Typing/store'
-import type { CompositionEvent, FormEvent } from 'react'
+import type { CompositionEvent, FormEvent, KeyboardEvent } from 'react'
 import { useCallback, useContext, useEffect, useRef, useState } from 'react'
+
+// Punctuation marks that can be input directly (both Chinese and English)
+const punctuations = new Set([
+  // Chinese punctuation
+  '\uff0c', // ，
+  '\u3002', // 。
+  '\uff01', // ！
+  '\uff1f', // ？
+  '\u3001', // 、
+  '\uff1b', // ；
+  '\uff1a', // ：
+  '\u201c', // "
+  '\u201d', // "
+  '\u2018', // '
+  '\u2019', // '
+  '\uff08', // （
+  '\uff09', // ）
+  '\u300a', // 《
+  '\u300b', // 》
+  '\u3010', // 【
+  '\u3011', // 】
+  '\u2014', // —
+  '\u2026', // …
+  '\u00b7', // ·
+  // English punctuation
+  ',',
+  '.',
+  '!',
+  '?',
+  ';',
+  ':',
+  "'",
+  '"',
+  '(',
+  ')',
+  '[',
+  ']',
+  '<',
+  '>',
+  '-',
+])
 
 export default function ChinesePinyinHandler({ updateInput }: { updateInput: (updateObj: WordUpdateAction) => void }) {
   const textareaRef = useRef<HTMLTextAreaElement>(null)
@@ -27,17 +68,33 @@ export default function ChinesePinyinHandler({ updateInput }: { updateInput: (up
     (e: CompositionEvent<HTMLTextAreaElement>) => {
       setIsComposing(false)
       const data = e.data
-      if (data) {
-        // Send each character separately for proper validation
-        for (const char of data) {
-          updateInput({ type: 'add', value: char, event: e as unknown as FormEvent<HTMLTextAreaElement> })
-        }
+      if (data && data.length > 0) {
+        // Send all characters from IME composition as a single input
+        updateInput({ type: 'add', value: data, event: e as unknown as FormEvent<HTMLTextAreaElement> })
       }
       if (textareaRef.current) {
         textareaRef.current.value = ''
       }
     },
     [updateInput],
+  )
+
+  const onKeyDown = useCallback(
+    (e: KeyboardEvent<HTMLTextAreaElement>) => {
+      // Handle punctuation keys directly when not composing
+      if (isComposing) return
+
+      const key = e.key
+      // Allow direct punctuation input (both Chinese and English punctuation)
+      if (punctuations.has(key)) {
+        e.preventDefault()
+        updateInput({ type: 'add', value: key, event: e as unknown as FormEvent<HTMLTextAreaElement> })
+        if (textareaRef.current) {
+          textareaRef.current.value = ''
+        }
+      }
+    },
+    [isComposing, updateInput],
   )
 
   const onInput = useCallback(
@@ -69,12 +126,13 @@ export default function ChinesePinyinHandler({ updateInput }: { updateInput: (up
 
   return (
     <textarea
-      className="absolute left-0 top-0 m-0 h-0 w-0 appearance-none overflow-hidden border-0 p-0 focus:outline-none"
+      className="fixed left-1/2 top-[60%] m-0 h-0 w-0 -translate-x-1/2 appearance-none overflow-hidden border-0 p-0 focus:outline-none"
       ref={textareaRef}
       autoFocus
       spellCheck="false"
       onCompositionStart={onCompositionStart}
       onCompositionEnd={onCompositionEnd}
+      onKeyDown={onKeyDown}
       onInput={onInput}
       onBlur={onBlur}
     ></textarea>

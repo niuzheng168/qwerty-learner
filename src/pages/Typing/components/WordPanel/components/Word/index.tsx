@@ -51,6 +51,7 @@ export default function WordComponent({ word, onFinish }: { word: Word; onFinish
 
   const [showTipAlert, setShowTipAlert] = useState(false)
   const wordPronunciationIconRef = useRef<WordPronunciationIconRef>(null)
+  const prevInputLengthRef = useRef(0)
 
   useEffect(() => {
     // run only when word changes
@@ -69,6 +70,7 @@ export default function WordComponent({ word, onFinish }: { word: Word; onFinish
     newWordState.startTime = getUtcStringForMixpanel()
     newWordState.randomLetterVisible = headword.split('').map(() => Math.random() > 0.4)
     setWordState(newWordState)
+    prevInputLengthRef.current = 0
   }, [word, setWordState])
 
   const updateInput = useCallback(
@@ -167,6 +169,8 @@ export default function WordComponent({ word, onFinish }: { word: Word; onFinish
 
   useEffect(() => {
     const inputLength = wordState.inputWord.length
+    const prevLength = prevInputLengthRef.current
+
     /**
      * TODO: 当用户输入错误时，会报错
      * Cannot update a component (`App`) while rendering a different component (`WordComponent`). To locate the bad setState() call inside `WordComponent`, follow the stack trace as described in https://reactjs.org/link/setstate-in-render
@@ -174,53 +178,74 @@ export default function WordComponent({ word, onFinish }: { word: Word; onFinish
      * 但这终究是一个 bug，需要修复
      */
     if (wordState.hasWrong || inputLength === 0 || wordState.displayWord.length === 0) {
+      prevInputLengthRef.current = inputLength
       return
     }
 
-    const inputChar = wordState.inputWord[inputLength - 1]
-    const correctChar = wordState.displayWord[inputLength - 1]
-    let isEqual = false
-    if (inputChar != undefined && correctChar != undefined) {
-      isEqual = isIgnoreCase ? inputChar.toLowerCase() === correctChar.toLowerCase() : inputChar === correctChar
+    // Check all newly added characters (supports multi-character input like Chinese IME)
+    let allCorrect = true
+    let wrongIndex = -1
+    let wrongChar = ''
+
+    for (let i = prevLength; i < inputLength; i++) {
+      const inputChar = wordState.inputWord[i]
+      const correctChar = wordState.displayWord[i]
+      let isEqual = false
+      if (inputChar != undefined && correctChar != undefined) {
+        isEqual = isIgnoreCase ? inputChar.toLowerCase() === correctChar.toLowerCase() : inputChar === correctChar
+      }
+
+      if (!isEqual) {
+        allCorrect = false
+        wrongIndex = i
+        wrongChar = inputChar
+        break
+      }
     }
 
-    if (isEqual) {
-      // 输入正确时
+    if (allCorrect) {
+      // All new characters are correct
       setWordState((state) => {
-        state.letterTimeArray.push(Date.now())
-        state.correctCount += 1
+        for (let i = prevLength; i < inputLength; i++) {
+          state.letterTimeArray.push(Date.now())
+          state.correctCount += 1
+          state.letterStates[i] = 'correct'
+        }
       })
 
       if (inputLength >= wordState.displayWord.length) {
-        // 完成输入时
+        // Word completed
         setWordState((state) => {
-          state.letterStates[inputLength - 1] = 'correct'
           state.isFinished = true
           state.endTime = getUtcStringForMixpanel()
         })
         playHintSound()
       } else {
-        setWordState((state) => {
-          state.letterStates[inputLength - 1] = 'correct'
-        })
         playKeySound()
       }
 
       dispatch({ type: TypingStateActionType.REPORT_CORRECT_WORD })
     } else {
-      // 出错时
+      // Found an error
       playBeepSound()
       setWordState((state) => {
-        state.letterStates[inputLength - 1] = 'wrong'
+        // Mark correct characters up to the error
+        for (let i = prevLength; i < wrongIndex; i++) {
+          state.letterStates[i] = 'correct'
+          state.letterTimeArray.push(Date.now())
+          state.correctCount += 1
+        }
+        // Mark the wrong character
+        state.letterStates[wrongIndex] = 'wrong'
         state.hasWrong = true
         state.hasMadeInputWrong = true
         state.wrongCount += 1
         state.letterTimeArray = []
 
-        if (state.letterMistake[inputLength - 1]) {
-          state.letterMistake[inputLength - 1].push(inputChar)
+        if (state.letterMistake[wrongIndex]) {
+          state.letterMistake[wrongIndex].push(wrongChar)
         } else {
-          state.letterMistake[inputLength - 1] = [inputChar]
+          state.letterMistake[wrongIndex] = [wrongChar]
         }
 
         const currentState = JSON.parse(JSON.stringify(state))
@@ -231,17 +256,41 @@ export default function WordComponent({ word, onFinish }: { word: Word; onFinish
         setShowTipAlert(true)
       }
     }
+
+    prevInputLengthRef.current = inputLength
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [wordState.inputWord])
 
   useEffect(() => {
     if (wordState.hasWrong) {
       const timer = setTimeout(() => {
-        setWordState((state) => {
-          state.inputWord = ''
-          state.letterStates = new Array(state.letterStates.length).fill('normal')
-          state.hasWrong = false
-        })
+        if (currentLanguage === 'zh') {
+          // For Chinese mode: keep correct characters, only reset from the wrong position
+          setWordState((state) => {
+            // Find the index of the wrong character
+            const wrongIndex = state.letterStates.findIndex((s) => s === 'wrong')
+            if (wrongIndex >= 0) {
+              // Keep input up to the wrong character (exclude the wrong one)
+              state.inputWord = state.inputWord.substring(0, wrongIndex)
+              // Reset letter states: keep 'correct' for already correct chars, reset rest to 'normal'
+              for (let i = wrongIndex; i < state.letterStates.length; i++) {
+                state.letterStates[i] = 'normal'
+              }
+            }
+            state.hasWrong = false
+          })
+          // Update prevInputLengthRef to the correct position
+          const wrongIndex = wordState.letterStates.findIndex((s) => s === 'wrong')
+          prevInputLengthRef.current = wrongIndex >= 0 ? wrongIndex : 0
+        } else {
+          // For other languages: reset everything (original behavior)
+          setWordState((state) => {
+            state.inputWord = ''
+            state.letterStates = new Array(state.letterStates.length).fill('normal')
+            state.hasWrong = false
+          })
+          prevInputLengthRef.current = 0
+        }
       }, 300)
 
       return () => {
@@ -287,7 +336,8 @@ export default function WordComponent({ word, onFinish }: { word: Word; onFinish
         lang={currentLanguageCategory !== 'code' ? currentLanguageCategory : 'en'}
         className="flex flex-col items-center justify-center pb-1 pt-4"
       >
-        {['romaji', 'hapin', 'zh'].includes(currentLanguage) && word.notation && <Notation notation={word.notation} />}
+        {['romaji', 'hapin'].includes(currentLanguage) && word.notation && <Notation notation={word.notation} />}
+        {currentLanguage === 'zh' && word.notation && <Notation notation={word.notation} pinyinOnly />}
         <div
           className={`tooltip-info relative w-fit bg-transparent p-0 leading-normal shadow-none dark:bg-transparent ${
             wordDictationConfig.isOpen ? 'tooltip' : ''

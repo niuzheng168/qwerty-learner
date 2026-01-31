@@ -6,7 +6,14 @@ import Phonetic from './components/Phonetic'
 import Translation from './components/Translation'
 import WordComponent from './components/Word'
 import { usePrefetchPronunciationSound } from '@/hooks/usePronunciation'
-import { isReviewModeAtom, isShowPrevAndNextWordAtom, loopWordConfigAtom, phoneticConfigAtom, reviewModeInfoAtom } from '@/store'
+import {
+  fontSizeConfigAtom,
+  isReviewModeAtom,
+  isShowPrevAndNextWordAtom,
+  loopWordConfigAtom,
+  phoneticConfigAtom,
+  reviewModeInfoAtom,
+} from '@/store'
 import type { Word } from '@/typings'
 import { useAtomValue, useSetAtom } from 'jotai'
 import { useCallback, useContext, useMemo, useState } from 'react'
@@ -16,6 +23,7 @@ export default function WordPanel() {
   // eslint-disable-next-line  @typescript-eslint/no-non-null-assertion
   const { state, dispatch } = useContext(TypingContext)!
   const phoneticConfig = useAtomValue(phoneticConfigAtom)
+  const fontSizeConfig = useAtomValue(fontSizeConfigAtom)
   const isShowPrevAndNextWord = useAtomValue(isShowPrevAndNextWordAtom)
   const [wordComponentKey, setWordComponentKey] = useState(0)
   const [currentWordExerciseCount, setCurrentWordExerciseCount] = useState(0)
@@ -171,6 +179,18 @@ export default function WordPanel() {
               </div>
             )}
             <div className="relative">
+              {(currentWord.title || currentWord.author) && (
+                <div className="mb-2 flex flex-col items-center font-mono text-gray-400 dark:text-gray-500">
+                  {currentWord.title && (
+                    <span className="font-bold" style={{ fontSize: `${Math.round(fontSizeConfig.foreignFont * 0.9)}px` }}>
+                      {currentWord.title}
+                    </span>
+                  )}
+                  {currentWord.author && (
+                    <span style={{ fontSize: `${Math.round(fontSizeConfig.foreignFont * 0.5)}px` }}>{currentWord.author}</span>
+                  )}
+                </div>
+              )}
               <WordComponent word={currentWord} onFinish={onFinish} key={wordComponentKey} />
               {phoneticConfig.isOpen && <Phonetic word={currentWord} />}
               <Translation

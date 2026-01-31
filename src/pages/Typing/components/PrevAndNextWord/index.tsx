@@ -27,6 +27,14 @@ export default function PrevAndNextWord({ type }: LastAndNextWordProps) {
   const headWord = useMemo(() => {
     if (!word) return ''
 
+    // For poetry mode, show title if available
+    if (word.title) {
+      if (type === 'next' && wordDictationConfig.isOpen) {
+        return word.title.replace(/./g, '_')
+      }
+      return word.title
+    }
+
     const showWord = ['romaji', 'hapin'].includes(currentLanguage) ? word.notation : word.name
 
     if (type === 'prev') return showWord
