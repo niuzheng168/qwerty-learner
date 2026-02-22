@@ -7,7 +7,6 @@ import PlayerPlane from './components/PlayerPlane'
 import ScoreDisplay from './components/ScoreDisplay'
 import StartScreen from './components/StartScreen'
 import type { Bullet, EnemyPlane } from './types'
-import { initialGameState } from './types'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
@@ -15,9 +14,17 @@ const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 const LEVEL_THRESHOLD = 10
 const MIN_SPAWN_INTERVAL = 800
 const SPAWN_DECREASE_RATE = 80
-const BASE_SPEED = 0.06
-const SPEED_INCREASE_RATE = 0.008
-const BULLET_SPEED = 0.02
+const BASE_SPEED = 0.08
+const SPEED_INCREASE_RATE = 0.01
+const BULLET_SPEED = 0.025
+
+type Difficulty = 'easy' | 'normal' | 'hard'
+
+const DIFFICULTY_SETTINGS: Record<Difficulty, { label: string; speedMultiplier: number; baseSpawnInterval: number; spawnBatch: number }> = {
+  easy: { label: '简单', speedMultiplier: 0.85, baseSpawnInterval: 2400, spawnBatch: 1 },
+  normal: { label: '普通', speedMultiplier: 1, baseSpawnInterval: 2000, spawnBatch: 1 },
+  hard: { label: '困难', speedMultiplier: 1.6, baseSpawnInterval: 1400, spawnBatch: 2 },
+}
 
 function generateId(): string {
   return Math.random().toString(36).substring(2, 9)
@@ -30,7 +37,11 @@ function getRandomLetter(): string {
 export default function GamePage() {
   const navigate = useNavigate()
 
-  // UI state that needs React rendering
+  // Game entities as state (for React rendering)
+  const [enemies, setEnemies] = useState<EnemyPlane[]>([])
+  const [bullets, setBullets] = useState<Bullet[]>([])
+
+  // UI state
   const [uiState, setUiState] = useState({
     isPlaying: false,
     isPaused: false,
@@ -40,24 +51,25 @@ export default function GamePage() {
     level: 1,
   })
 
-  // Render trigger
-  const [renderTick, setRenderTick] = useState(0)
-
   const [dimensions, setDimensions] = useState({ width: window.innerWidth, height: window.innerHeight })
+  const [difficulty, setDifficulty] = useState<Difficulty>('normal')
 
-  // Mutable game state in refs (no re-renders on change)
-  const enemiesRef = useRef<EnemyPlane[]>([])
-  const bulletsRef = useRef<Bullet[]>([])
+  // Refs for values needed in animation loop (to avoid stale closures)
+  const uiStateRef = useRef(uiState)
+  uiStateRef.current = uiState
+  const dimensionsRef = useRef(dimensions)
+  dimensionsRef.current = dimensions
+  const enemiesRef = useRef(enemies)
+  enemiesRef.current = enemies
+  const bulletsRef = useRef(bullets)
+  bulletsRef.current = bullets
+  const difficultyRef = useRef(difficulty)
+  difficultyRef.current = difficulty
+
   const lastSpawnTimeRef = useRef(0)
   const spawnIntervalRef = useRef(2000)
-  const animationFrameRef = useRef<number>()
+  const animationFrameRef = useRef<number | null>(null)
   const lastFrameTimeRef = useRef(0)
-  const isPlayingRef = useRef(false)
-  const isPausedRef = useRef(false)
-  const isGameOverRef = useRef(false)
-  const scoreRef = useRef(0)
-  const healthRef = useRef(5)
-  const levelRef = useRef(1)
 
   useEffect(() => {
     const handleResize = () => {
@@ -68,174 +80,179 @@ export default function GamePage() {
   }, [])
 
   // Main game loop
-  const gameLoop = useCallback(
-    (timestamp: number) => {
-      if (!isPlayingRef.current || isPausedRef.current || isGameOverRef.current) {
+  useEffect(() => {
+    const gameLoop = (timestamp: number) => {
+      animationFrameRef.current = requestAnimationFrame(gameLoop)
+
+      const state = uiStateRef.current
+      if (!state.isPlaying || state.isPaused || state.isGameOver) {
         lastFrameTimeRef.current = timestamp
-        animationFrameRef.current = requestAnimationFrame(gameLoop)
         return
       }
 
       const deltaTime = lastFrameTimeRef.current ? timestamp - lastFrameTimeRef.current : 16
       lastFrameTimeRef.current = timestamp
-
-      // Cap deltaTime to prevent huge jumps
       const cappedDelta = Math.min(deltaTime, 50)
+
+      const dims = dimensionsRef.current
+      const currentEnemies = enemiesRef.current
+      const currentBullets = bulletsRef.current
+      let healthLost = 0
+
+      let enemiesAfterSpawn = currentEnemies
+
+      const difficultySettings = DIFFICULTY_SETTINGS[difficultyRef.current]
 
       // Spawn enemies
       if (timestamp - lastSpawnTimeRef.current > spawnIntervalRef.current) {
-        const speed = BASE_SPEED + (levelRef.current - 1) * SPEED_INCREASE_RATE
-        enemiesRef.current.push({
+        const speed = (BASE_SPEED + (state.level - 1) * SPEED_INCREASE_RATE) * difficultySettings.speedMultiplier
+        const batch = difficultySettings.spawnBatch + Math.floor((state.level - 1) / 5)
+        const spawned: EnemyPlane[] = Array.from({ length: batch }).map(() => ({
           id: generateId(),
           letter: getRandomLetter(),
-          x: 80 + Math.random() * (dimensions.width - 160),
-          y: -60,
+          x: 80 + Math.random() * (dims.width - 160),
+          y: -60 - Math.random() * 80,
           speed,
-        })
+        }))
+        enemiesAfterSpawn = [...currentEnemies, ...spawned]
         lastSpawnTimeRef.current = timestamp
       }
 
-      // Update enemies
-      let healthLost = 0
-      const bottomLimit = dimensions.height - 140
-
-      for (let i = enemiesRef.current.length - 1; i >= 0; i--) {
-        enemiesRef.current[i].y += enemiesRef.current[i].speed * cappedDelta
-        if (enemiesRef.current[i].y > bottomLimit) {
-          enemiesRef.current.splice(i, 1)
+      // Update enemy positions
+      const levelSpeedMultiplier = (1 + (state.level - 1) * SPEED_INCREASE_RATE) * difficultySettings.speedMultiplier
+      const bottomLimit = dims.height - 160
+      const updatedEnemies: EnemyPlane[] = []
+      for (const enemy of enemiesAfterSpawn) {
+        const nextY = enemy.y + enemy.speed * levelSpeedMultiplier * cappedDelta
+        if (nextY > bottomLimit) {
           healthLost++
+          continue
         }
+        updatedEnemies.push({ ...enemy, y: nextY })
       }
 
       // Update bullets
-      for (let i = bulletsRef.current.length - 1; i >= 0; i--) {
-        bulletsRef.current[i].progress += (BULLET_SPEED * cappedDelta) / 16
-        if (bulletsRef.current[i].progress >= 1) {
-          bulletsRef.current.splice(i, 1)
+      const updatedBullets: Bullet[] = []
+      for (const bullet of currentBullets) {
+        const nextProgress = bullet.progress + (BULLET_SPEED * cappedDelta) / 16
+        if (nextProgress < 1) {
+          updatedBullets.push({ ...bullet, progress: nextProgress })
         }
       }
+
+      // Update state
+      setEnemies(updatedEnemies)
+      setBullets(updatedBullets)
 
       // Handle health loss
       if (healthLost > 0) {
-        healthRef.current = Math.max(0, healthRef.current - healthLost)
-        if (healthRef.current <= 0) {
-          isGameOverRef.current = true
-          isPlayingRef.current = false
-          setUiState((prev) => ({
-            ...prev,
-            health: 0,
-            isGameOver: true,
-            isPlaying: false,
-          }))
-        } else {
-          setUiState((prev) => ({ ...prev, health: healthRef.current }))
-        }
+        setUiState((prev) => {
+          const newHealth = Math.max(0, prev.health - healthLost)
+          if (newHealth <= 0) {
+            return { ...prev, health: 0, isGameOver: true, isPlaying: false }
+          }
+          return { ...prev, health: newHealth }
+        })
       }
+    }
 
-      // Trigger render
-      setRenderTick((t) => t + 1)
-
-      animationFrameRef.current = requestAnimationFrame(gameLoop)
-    },
-    [dimensions],
-  )
-
-  // Start/stop game loop
-  useEffect(() => {
     animationFrameRef.current = requestAnimationFrame(gameLoop)
     return () => {
-      if (animationFrameRef.current) {
+      if (animationFrameRef.current !== null) {
         cancelAnimationFrame(animationFrameRef.current)
       }
     }
-  }, [gameLoop])
+  }, [])
 
   // Handle keyboard input
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
+      const state = uiStateRef.current
+
       // ESC for pause
       if (e.key === 'Escape') {
         e.preventDefault()
-        if (isGameOverRef.current || !isPlayingRef.current) return
-        isPausedRef.current = !isPausedRef.current
-        setUiState((prev) => ({ ...prev, isPaused: isPausedRef.current }))
+        if (state.isGameOver || !state.isPlaying) return
+        setUiState((prev) => ({ ...prev, isPaused: !prev.isPaused }))
         return
       }
 
       // Letter keys
       if (!/^[a-zA-Z]$/.test(e.key) || e.altKey || e.ctrlKey || e.metaKey) return
-      if (isPausedRef.current || isGameOverRef.current) return
+      if (state.isPaused || state.isGameOver) return
 
       const key = e.key.toUpperCase()
 
       // Start game on first key press
-      if (!isPlayingRef.current) {
-        isPlayingRef.current = true
+      if (!state.isPlaying) {
+        const difficultySettings = DIFFICULTY_SETTINGS[difficultyRef.current]
+        spawnIntervalRef.current = Math.max(
+          MIN_SPAWN_INTERVAL,
+          difficultySettings.baseSpawnInterval - (state.level - 1) * SPAWN_DECREASE_RATE,
+        )
         lastSpawnTimeRef.current = performance.now()
         lastFrameTimeRef.current = performance.now()
         setUiState((prev) => ({ ...prev, isPlaying: true }))
         return
       }
 
-      // Find and shoot enemy
+      // Find enemy with matching letter (closest to bottom)
+      const currentEnemies = enemiesRef.current
       let targetIndex = -1
       let maxY = -Infinity
-      for (let i = 0; i < enemiesRef.current.length; i++) {
-        if (enemiesRef.current[i].letter === key && enemiesRef.current[i].y > maxY) {
-          maxY = enemiesRef.current[i].y
+      for (let i = 0; i < currentEnemies.length; i++) {
+        if (currentEnemies[i].letter === key && currentEnemies[i].y > maxY) {
+          maxY = currentEnemies[i].y
           targetIndex = i
         }
       }
 
       if (targetIndex >= 0) {
-        const target = enemiesRef.current[targetIndex]
+        const target = currentEnemies[targetIndex]
+        const dims = dimensionsRef.current
 
-        // Add bullet
-        bulletsRef.current.push({
-          id: generateId(),
-          targetId: target.id,
-          startY: dimensions.height - 100,
-          targetX: target.x,
-          targetY: target.y,
-          progress: 0,
-        })
+        // Add bullet and remove enemy
+        setBullets((prev) => [
+          ...prev,
+          {
+            id: generateId(),
+            targetId: target.id,
+            startY: dims.height - 120,
+            targetX: target.x,
+            targetY: target.y,
+            progress: 0,
+          },
+        ])
 
-        // Remove enemy
-        enemiesRef.current.splice(targetIndex, 1)
+        setEnemies((prev) => prev.filter((_, i) => i !== targetIndex))
 
         // Update score
-        scoreRef.current += 1
-        const newLevel = Math.floor(scoreRef.current / LEVEL_THRESHOLD) + 1
-        if (newLevel !== levelRef.current) {
-          levelRef.current = newLevel
-          spawnIntervalRef.current = Math.max(MIN_SPAWN_INTERVAL, 2000 - (newLevel - 1) * SPAWN_DECREASE_RATE)
-        }
-
-        setUiState((prev) => ({
-          ...prev,
-          score: scoreRef.current,
-          level: levelRef.current,
-        }))
+        setUiState((prev) => {
+          const newScore = prev.score + 1
+          const newLevel = Math.floor(newScore / LEVEL_THRESHOLD) + 1
+          if (newLevel !== prev.level) {
+            const difficultySettings = DIFFICULTY_SETTINGS[difficultyRef.current]
+            spawnIntervalRef.current = Math.max(
+              MIN_SPAWN_INTERVAL,
+              difficultySettings.baseSpawnInterval - (newLevel - 1) * SPAWN_DECREASE_RATE,
+            )
+          }
+          return { ...prev, score: newScore, level: newLevel }
+        })
       }
     }
 
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [dimensions.height])
+  }, [])
 
   const handleStart = useCallback(() => {
-    enemiesRef.current = []
-    bulletsRef.current = []
-    scoreRef.current = 0
-    healthRef.current = 5
-    levelRef.current = 1
-    spawnIntervalRef.current = 2000
-    isPlayingRef.current = true
-    isPausedRef.current = false
-    isGameOverRef.current = false
+    setEnemies([])
+    setBullets([])
+    const difficultySettings = DIFFICULTY_SETTINGS[difficultyRef.current]
+    spawnIntervalRef.current = Math.max(MIN_SPAWN_INTERVAL, difficultySettings.baseSpawnInterval)
     lastSpawnTimeRef.current = performance.now()
     lastFrameTimeRef.current = performance.now()
-
     setUiState({
       isPlaying: true,
       isPaused: false,
@@ -251,12 +268,10 @@ export default function GamePage() {
   }, [navigate])
 
   const handlePause = useCallback(() => {
-    isPausedRef.current = true
     setUiState((prev) => ({ ...prev, isPaused: true }))
   }, [])
 
   const handleResume = useCallback(() => {
-    isPausedRef.current = false
     lastFrameTimeRef.current = performance.now()
     setUiState((prev) => ({ ...prev, isPaused: false }))
   }, [])
@@ -299,12 +314,12 @@ export default function GamePage() {
         <div className="absolute left-[60%] top-[15%] h-12 w-24 rounded-full bg-white/30 blur-sm dark:bg-white/10" />
 
         {/* Enemy planes */}
-        {enemiesRef.current.map((enemy) => (
+        {enemies.map((enemy) => (
           <EnemyPlaneComponent key={enemy.id} enemy={enemy} containerHeight={dimensions.height - 60} />
         ))}
 
         {/* Bullets */}
-        {bulletsRef.current.map((bullet) => (
+        {bullets.map((bullet) => (
           <BulletComponent key={bullet.id} bullet={bullet} playerX={dimensions.width / 2} />
         ))}
 
@@ -312,13 +327,32 @@ export default function GamePage() {
         <PlayerPlane />
 
         {/* Start screen */}
-        {!uiState.isPlaying && !uiState.isGameOver && <StartScreen onStart={handleStart} />}
+        {!uiState.isPlaying && !uiState.isGameOver && (
+          <StartScreen onStart={handleStart} selectedDifficulty={difficulty} onSelectDifficulty={setDifficulty} />
+        )}
 
         {/* Pause screen */}
-        {uiState.isPaused && !uiState.isGameOver && <PauseScreen onResume={handleResume} onRestart={handleStart} onBack={handleBack} />}
+        {uiState.isPaused && !uiState.isGameOver && (
+          <PauseScreen
+            onResume={handleResume}
+            onRestart={handleStart}
+            onBack={handleBack}
+            selectedDifficulty={difficulty}
+            onSelectDifficulty={setDifficulty}
+          />
+        )}
 
         {/* Game over screen */}
-        {uiState.isGameOver && <GameOverScreen score={uiState.score} level={uiState.level} onRestart={handleStart} onBack={handleBack} />}
+        {uiState.isGameOver && (
+          <GameOverScreen
+            score={uiState.score}
+            level={uiState.level}
+            onRestart={handleStart}
+            onBack={handleBack}
+            selectedDifficulty={difficulty}
+            onSelectDifficulty={setDifficulty}
+          />
+        )}
       </div>
 
       {/* Footer hint */}

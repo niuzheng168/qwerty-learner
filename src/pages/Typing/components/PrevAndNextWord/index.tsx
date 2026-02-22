@@ -7,6 +7,11 @@ import { useCallback, useContext, useMemo } from 'react'
 import IconPrev from '~icons/tabler/arrow-narrow-left'
 import IconNext from '~icons/tabler/arrow-narrow-right'
 
+// Extract Chinese characters from notation format: 床(chuáng)前(qián) -> 床前
+const extractChineseFromNotation = (notation: string): string => {
+  return notation.replace(/\(([^)]+)\)/g, '')
+}
+
 export default function PrevAndNextWord({ type }: LastAndNextWordProps) {
   // eslint-disable-next-line  @typescript-eslint/no-non-null-assertion
   const { state, dispatch } = useContext(TypingContext)!
@@ -35,7 +40,13 @@ export default function PrevAndNextWord({ type }: LastAndNextWordProps) {
       return word.title
     }
 
-    const showWord = ['romaji', 'hapin'].includes(currentLanguage) ? word.notation : word.name
+    // For Chinese with notation, extract the characters from notation
+    let showWord: string | undefined
+    if (currentLanguage === 'zh' && word.notation) {
+      showWord = extractChineseFromNotation(word.notation)
+    } else {
+      showWord = ['romaji', 'hapin'].includes(currentLanguage) ? word.notation : word.name
+    }
 
     if (type === 'prev') return showWord
 

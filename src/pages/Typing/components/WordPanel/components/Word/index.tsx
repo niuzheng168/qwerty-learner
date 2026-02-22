@@ -31,6 +31,12 @@ import { useImmer } from 'use-immer'
 
 const vowelLetters = ['A', 'E', 'I', 'O', 'U']
 
+// Extract Chinese characters from notation format: 床(chuáng)前(qián) -> 床前
+const extractChineseFromNotation = (notation: string): string => {
+  // Match pattern: character(pinyin) and extract just the character
+  return notation.replace(/\(([^)]+)\)/g, '')
+}
+
 export default function WordComponent({ word, onFinish }: { word: Word; onFinish: () => void }) {
   // eslint-disable-next-line  @typescript-eslint/no-non-null-assertion
   const { state, dispatch } = useContext(TypingContext)!
@@ -57,7 +63,9 @@ export default function WordComponent({ word, onFinish }: { word: Word; onFinish
     // run only when word changes
     let headword = ''
     try {
-      headword = word.name.replace(new RegExp(' ', 'g'), EXPLICIT_SPACE)
+      // For Chinese with notation (poetry), use the notation content instead of name
+      const sourceText = currentLanguage === 'zh' && word.notation ? extractChineseFromNotation(word.notation) : word.name
+      headword = sourceText.replace(new RegExp(' ', 'g'), EXPLICIT_SPACE)
       headword = headword.replace(new RegExp('…', 'g'), '..')
     } catch (e) {
       console.error('word.name is not a string', word)
@@ -337,30 +345,49 @@ export default function WordComponent({ word, onFinish }: { word: Word; onFinish
         className="flex flex-col items-center justify-center pb-1 pt-4"
       >
         {['romaji', 'hapin'].includes(currentLanguage) && word.notation && <Notation notation={word.notation} />}
-        {currentLanguage === 'zh' && word.notation && <Notation notation={word.notation} pinyinOnly />}
-        <div
-          className={`tooltip-info relative w-fit bg-transparent p-0 leading-normal shadow-none dark:bg-transparent ${
-            wordDictationConfig.isOpen ? 'tooltip' : ''
-          }`}
-          data-tip="按 Tab 快捷键显示完整单词"
-        >
+        {currentLanguage === 'zh' && word.notation && (
+          <Notation
+            notation={word.notation}
+            pinyinOnly
+            letterStates={wordState.letterStates}
+            getLetterVisible={getLetterVisible}
+            hasWrong={wordState.hasWrong}
+          />
+        )}
+        {/* For Chinese with notation, characters are rendered inside Notation component */}
+        {!(currentLanguage === 'zh' && word.notation) && (
           <div
-            onMouseEnter={() => handleHoverWord(true)}
-            onMouseLeave={() => handleHoverWord(false)}
-            className={`flex items-center ${isTextSelectable && 'select-all'} justify-center ${wordState.hasWrong ? style.wrong : ''}`}
+            className={`tooltip-info relative w-fit bg-transparent p-0 leading-normal shadow-none dark:bg-transparent ${
+              wordDictationConfig.isOpen ? 'tooltip' : ''
+            }`}
+            data-tip="按 Tab 快捷键显示完整单词"
           >
-            {wordState.displayWord.split('').map((t, index) => {
-              return <Letter key={`${index}-${t}`} letter={t} visible={getLetterVisible(index)} state={wordState.letterStates[index]} />
-            })}
-          </div>
-          {pronunciationIsOpen && (
-            <div className="absolute -right-12 top-1/2 h-9 w-9 -translate-y-1/2 transform ">
-              <Tooltip content={`快捷键${CTRL} + J`}>
-                <WordPronunciationIcon word={word} lang={currentLanguage} ref={wordPronunciationIconRef} className="h-full w-full" />
-              </Tooltip>
+            <div
+              onMouseEnter={() => handleHoverWord(true)}
+              onMouseLeave={() => handleHoverWord(false)}
+              className={`flex items-center ${isTextSelectable && 'select-all'} justify-center ${wordState.hasWrong ? style.wrong : ''}`}
+            >
+              {wordState.displayWord.split('').map((t, index) => {
+                return <Letter key={`${index}-${t}`} letter={t} visible={getLetterVisible(index)} state={wordState.letterStates[index]} />
+              })}
             </div>
-          )}
-        </div>
+            {pronunciationIsOpen && (
+              <div className="absolute -right-12 top-1/2 h-9 w-9 -translate-y-1/2 transform ">
+                <Tooltip content={`快捷键${CTRL} + J`}>
+                  <WordPronunciationIcon word={word} lang={currentLanguage} ref={wordPronunciationIconRef} className="h-full w-full" />
+                </Tooltip>
+              </div>
+            )}
+          </div>
+        )}
+        {/* Pronunciation icon for Chinese with notation */}
+        {currentLanguage === 'zh' && word.notation && pronunciationIsOpen && (
+          <div className="mt-2">
+            <Tooltip content={`快捷键${CTRL} + J`}>
+              <WordPronunciationIcon word={word} lang={currentLanguage} ref={wordPronunciationIconRef} className="h-9 w-9" />
+            </Tooltip>
+          </div>
+        )}
       </div>
       <TipAlert className="fixed bottom-10 right-3" show={showTipAlert} setShow={setShowTipAlert} />
     </>

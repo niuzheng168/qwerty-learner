@@ -1,11 +1,15 @@
+type Difficulty = 'easy' | 'normal' | 'hard'
+
 type Props = {
   score: number
   level: number
   onRestart: () => void
   onBack: () => void
+  selectedDifficulty: Difficulty
+  onSelectDifficulty: (difficulty: Difficulty) => void
 }
 
-export default function GameOverScreen({ score, level, onRestart, onBack }: Props) {
+export default function GameOverScreen({ score, level, onRestart, onBack, selectedDifficulty, onSelectDifficulty }: Props) {
   return (
     <div className="absolute inset-0 z-20 flex items-center justify-center">
       <div className="absolute inset-0 bg-black/50" />
@@ -18,6 +22,28 @@ export default function GameOverScreen({ score, level, onRestart, onBack }: Prop
           <p className="mt-2 text-xl text-gray-600 dark:text-gray-400">
             达到等级: <span className="font-bold text-green-600 dark:text-green-400">{level}</span>
           </p>
+        </div>
+        <div className="mb-6 flex flex-col items-center gap-3">
+          <span className="text-sm font-medium text-gray-500 dark:text-gray-400">选择难度</span>
+          <div className="flex gap-2">
+            {(['easy', 'normal', 'hard'] as Difficulty[]).map((levelKey) => {
+              const isActive = selectedDifficulty === levelKey
+              const label = levelKey === 'easy' ? '简单' : levelKey === 'normal' ? '普通' : '困难'
+              return (
+                <button
+                  key={levelKey}
+                  onClick={() => onSelectDifficulty(levelKey)}
+                  className={`rounded-full px-4 py-2 text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-400 ${
+                    isActive
+                      ? 'bg-indigo-600 text-white shadow-md'
+                      : 'bg-indigo-50 text-indigo-700 hover:bg-indigo-100 dark:bg-gray-700 dark:text-indigo-200 dark:hover:bg-gray-600'
+                  }`}
+                >
+                  {label}
+                </button>
+              )
+            })}
+          </div>
         </div>
         <div className="flex gap-4">
           <button

@@ -1,10 +1,14 @@
+type Difficulty = 'easy' | 'normal' | 'hard'
+
 type Props = {
   onResume: () => void
   onRestart: () => void
   onBack: () => void
+  selectedDifficulty: Difficulty
+  onSelectDifficulty: (difficulty: Difficulty) => void
 }
 
-export default function PauseScreen({ onResume, onRestart, onBack }: Props) {
+export default function PauseScreen({ onResume, onRestart, onBack, selectedDifficulty, onSelectDifficulty }: Props) {
   return (
     <div className="absolute inset-0 z-20 flex items-center justify-center">
       <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
@@ -17,6 +21,28 @@ export default function PauseScreen({ onResume, onRestart, onBack }: Props) {
         </div>
         <h1 className="mb-2 text-4xl font-bold text-gray-800 dark:text-gray-100">游戏暂停</h1>
         <p className="mb-8 text-lg text-gray-500 dark:text-gray-400">按 ESC 或点击继续按钮恢复游戏</p>
+        <div className="mb-6 flex flex-col items-center gap-3">
+          <span className="text-sm font-medium text-gray-500 dark:text-gray-400">选择难度</span>
+          <div className="flex gap-2">
+            {(['easy', 'normal', 'hard'] as Difficulty[]).map((level) => {
+              const isActive = selectedDifficulty === level
+              const label = level === 'easy' ? '简单' : level === 'normal' ? '普通' : '困难'
+              return (
+                <button
+                  key={level}
+                  onClick={() => onSelectDifficulty(level)}
+                  className={`rounded-full px-4 py-2 text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-400 ${
+                    isActive
+                      ? 'bg-indigo-600 text-white shadow-md'
+                      : 'bg-indigo-50 text-indigo-700 hover:bg-indigo-100 dark:bg-gray-700 dark:text-indigo-200 dark:hover:bg-gray-600'
+                  }`}
+                >
+                  {label}
+                </button>
+              )
+            })}
+          </div>
+        </div>
         <div className="flex flex-col gap-3">
           <button
             onClick={onResume}
