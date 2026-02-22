@@ -201,6 +201,19 @@ export default function WordComponent({ word, onFinish }: { word: Word; onFinish
       let isEqual = false
       if (inputChar != undefined && correctChar != undefined) {
         isEqual = isIgnoreCase ? inputChar.toLowerCase() === correctChar.toLowerCase() : inputChar === correctChar
+        // In Chinese mode, treat equivalent Chinese/English punctuation as the same
+        if (!isEqual && currentLanguage === 'zh') {
+          const punctuationPairs: [string, string][] = [
+            ['，', ','],
+            ['。', '.'],
+          ]
+          for (const [cn, en] of punctuationPairs) {
+            if ((inputChar === cn && correctChar === en) || (inputChar === en && correctChar === cn)) {
+              isEqual = true
+              break
+            }
+          }
+        }
       }
 
       if (!isEqual) {
