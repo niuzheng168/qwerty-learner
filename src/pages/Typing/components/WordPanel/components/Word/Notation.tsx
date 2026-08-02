@@ -47,9 +47,39 @@ const groupIntoLines = (infos: NotationInfo[]): NotationInfo[][] => {
   return lines
 }
 
+// Minimum visible character count per line. Short lines are merged with the next
+// line so e.g. "他姓张。什么张？" doesn't get split across two stanzas.
+const LINE_MERGE_THRESHOLD = 10
+
+const lineCharCount = (line: NotationInfo[]): number => line.reduce((sum, info) => sum + info.word.length, 0)
+
+// Merge consecutive lines while the running length stays below the threshold.
+const mergeShortLines = (lines: NotationInfo[][], threshold = LINE_MERGE_THRESHOLD): NotationInfo[][] => {
+  if (lines.length <= 1) return lines
+  const merged: NotationInfo[][] = []
+  let buffer: NotationInfo[] = []
+
+  for (const line of lines) {
+    buffer = buffer.concat(line)
+    if (lineCharCount(buffer) >= threshold) {
+      merged.push(buffer)
+      buffer = []
+    }
+  }
+  if (buffer.length > 0) {
+    // Trailing short fragment: append to the previous line so we don't leave a stub.
+    if (merged.length > 0) {
+      merged[merged.length - 1] = merged[merged.length - 1].concat(buffer)
+    } else {
+      merged.push(buffer)
+    }
+  }
+  return merged
+}
+
 export default function Notation({ notation, pinyinOnly = false, letterStates = [], getLetterVisible, hasWrong = false }: NotationProps) {
   const infos: NotationInfo[] = useMemo(() => getNotationInfo(notation), [notation])
-  const lines = useMemo(() => groupIntoLines(infos), [infos])
+  const lines = useMemo(() => mergeShortLines(groupIntoLines(infos)), [infos])
   const fontSizeConfig = useAtomValue(fontSizeConfigAtom)
 
   // For Chinese (pinyinOnly mode): show pinyin aligned with characters
@@ -64,62 +94,85 @@ export default function Notation({ notation, pinyinOnly = false, letterStates = 
       wrong: 'text-red-600 dark:text-red-400',
     }
 
+    // Group each non-punctuation NotationInfo with any immediately-following
+    // punctuation so a "。" never wraps onto its own visual line, breaking
+    // away from the character it belongs to.
+    const groupIntoUnits = (lineInfos: NotationInfo[]): NotationInfo[][] => {
+      const units: NotationInfo[][] = []
+      let current: NotationInfo[] = []
+      for (const info of lineInfos) {
+        if (isPunctuation(info.word) && current.length > 0) {
+          current.push(info)
+        } else {
+          if (current.length) units.push(current)
+          current = [info]
+        }
+      }
+      if (current.length) units.push(current)
+      return units
+    }
+
     return (
-      <div className={`mx-auto mb-2 flex max-w-4xl flex-col items-center ${hasWrong ? style.wrong : ''}`}>
+      <div
+        className={`mx-auto mb-2 flex max-w-4xl flex-col items-center overflow-y-auto ${hasWrong ? style.wrong : ''}`}
+        style={{ maxHeight: 'calc(100vh - 220px)' }}
+      >
         {lines.map((lineInfos, lineIndex) => {
+          const units = groupIntoUnits(lineInfos)
           return (
             <div key={lineIndex} className="flex flex-wrap justify-center">
-              {lineInfos.map(({ word, phonetic }, index) => {
-                const isPunct = isPunctuation(word)
-                // For multi-character words, we need to render each char separately
-                const chars = word.split('')
+              {units.map((unit, unitIndex) => (
+                // Each unit (word + trailing punctuation) is a single flex
+                // child of the wrap container, so the punctuation cannot wrap
+                // away from its character.
+                <div key={`${lineIndex}-${unitIndex}`} className="flex">
+                  {unit.map(({ word, phonetic }, infoIndex) => {
+                    const isPunct = isPunctuation(word)
+                    const chars = word.split('')
+                    return (
+                      <div key={`${lineIndex}-${unitIndex}-${infoIndex}`} className={`flex ${isPunct ? '' : ''}`}>
+                        {chars.map((char, charOffset) => {
+                          const currentCharIndex = charIndex
+                          charIndex++
 
-                return (
-                  <div key={`${lineIndex}-${index}`} className={`flex ${isPunct ? '' : ''}`}>
-                    {chars.map((char, charOffset) => {
-                      const currentCharIndex = charIndex
-                      charIndex++
+                          const isPunctChar = isPunctuation(char)
+                          const state = letterStates[currentCharIndex] || 'normal'
+                          const visible = getLetterVisible ? getLetterVisible(currentCharIndex) : true
 
-                      const isPunctChar = isPunctuation(char)
-                      const state = letterStates[currentCharIndex] || 'normal'
-                      const visible = getLetterVisible ? getLetterVisible(currentCharIndex) : true
+                          let charPinyin = ''
+                          if (!isPunctChar && phonetic) {
+                            if (chars.length === 1) {
+                              charPinyin = phonetic
+                            } else {
+                              charPinyin = charOffset === 0 ? phonetic : ''
+                            }
+                          }
 
-                      // Calculate pinyin for this specific character
-                      // If word has multiple chars but only one phonetic, distribute it
-                      let charPinyin = ''
-                      if (!isPunctChar && phonetic) {
-                        if (chars.length === 1) {
-                          charPinyin = phonetic
-                        } else {
-                          // For multi-char words with single phonetic, only show on first char
-                          // This handles edge cases in the notation format
-                          charPinyin = charOffset === 0 ? phonetic : ''
-                        }
-                      }
-
-                      return (
-                        <div
-                          key={`${lineIndex}-${index}-${charOffset}`}
-                          className={`flex flex-col items-center ${isPunctChar ? 'mx-0' : 'mx-0.5'}`}
-                        >
-                          <span
-                            className="text-center font-mono text-lg text-gray-500 dark:text-gray-400"
-                            style={{ minHeight: '1.5rem', minWidth: '1em' }}
-                          >
-                            {isPunctChar ? '' : charPinyin}
-                          </span>
-                          <span
-                            className={`m-0 p-0 font-mono font-normal ${stateClassNameMap[state]} duration-0 dark:text-opacity-80`}
-                            style={{ fontSize: fontSizeConfig.foreignFont.toString() + 'px' }}
-                          >
-                            {visible ? (char === ' ' ? EXPLICIT_SPACE : char) : '_'}
-                          </span>
-                        </div>
-                      )
-                    })}
-                  </div>
-                )
-              })}
+                          return (
+                            <div
+                              key={`${lineIndex}-${unitIndex}-${infoIndex}-${charOffset}`}
+                              className={`flex flex-col items-center ${isPunctChar ? 'mx-0' : 'mx-0.5'}`}
+                            >
+                              <span
+                                className="text-center font-mono text-lg text-gray-500 dark:text-gray-400"
+                                style={{ minHeight: '1.5rem', minWidth: '1em' }}
+                              >
+                                {isPunctChar ? '' : charPinyin}
+                              </span>
+                              <span
+                                className={`m-0 p-0 font-mono font-normal ${stateClassNameMap[state]} duration-0 dark:text-opacity-80`}
+                                style={{ fontSize: fontSizeConfig.foreignFont.toString() + 'px' }}
+                              >
+                                {visible ? (char === ' ' ? EXPLICIT_SPACE : char) : '_'}
+                              </span>
+                            </div>
+                          )
+                        })}
+                      </div>
+                    )
+                  })}
+                </div>
+              ))}
             </div>
           )
         })}

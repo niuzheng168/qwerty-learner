@@ -1,5 +1,3 @@
-version: '3'
-
 services:
   qwertylearner:
     build:
@@ -7,3 +5,13 @@ services:
       dockerfile: Dockerfile
     ports:
       - '8990:5173'
+    env_file:
+      - .env
+    environment:
+      # Consumed by envsubst when nginx starts (see default.conf.template).
+      - SPEECH_REGION=${SPEECH_REGION}
+      - SPEECH_KEY=${SPEECH_KEY}
+    volumes:
+      # Mount dictionaries at runtime so updates take effect without rebuilding the image.
+      - ./public/dicts:/app/dicts:ro
+    restart: unless-stopped

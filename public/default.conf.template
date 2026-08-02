@@ -1,0 +1,41 @@
+resolver 1.1.1.1 8.8.8.8 ipv6=off valid=300s;
+resolver_timeout 5s;
+
+server {
+    listen       5173;
+    listen  [::]:5173;
+    server_name  localhost;
+
+    # Static SPA
+    location / {
+        root   /app;
+        index  index.html index.htm;
+    }
+
+    # Dictionaries are mounted from the host; always serve the latest version.
+    location /dicts/ {
+        root /app;
+        add_header Cache-Control "no-store, no-cache, must-revalidate";
+        expires off;
+        etag off;
+        if_modified_since off;
+    }
+
+    # Azure TTS reverse proxy. Frontend POSTs SSML body here; nginx injects
+    # the subscription key server-side so it's never sent to the browser.
+    location = /tts/synthesize {
+        set $azure_tts_host "${SPEECH_REGION}.tts.speech.microsoft.com";
+        proxy_pass https://$azure_tts_host/cognitiveservices/v1;
+        proxy_set_header Host $azure_tts_host;
+        proxy_set_header Ocp-Apim-Subscription-Key "${SPEECH_KEY}";
+        proxy_ssl_server_name on;
+        proxy_http_version 1.1;
+        client_max_body_size 1m;
+        proxy_read_timeout 60s;
+    }
+
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+        root   /app;
+    }
+}

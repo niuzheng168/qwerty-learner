@@ -17,6 +17,9 @@ export const WordPronunciationIcon = React.forwardRef<
         // 哈萨克语老文字
         return word.trans[2]
       }
+    } else if (lang === 'zh' && word.notation) {
+      // 中文: 读出 notation 中的完整文本（去掉拼音括号）
+      return word.notation.replace(/\(([^)]+)\)/g, '')
     } else {
       return word.name
     }

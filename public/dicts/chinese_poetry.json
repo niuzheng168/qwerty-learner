@@ -1,556 +1,10 @@
 [
     {
-        "name": "江南",
-        "trans": [],
-        "title": "江南",
-        "author": "汉乐府",
-        "notation": "江(jiāng)南(nán)可(kě)采(cǎi)莲(lián)，(，)莲(lián)叶(yè)何(hé)田(tián)田(tián)。(。)鱼(yú)戏(xì)莲(lián)叶(yè)间(jiān)。(。)鱼(yú)戏(xì)莲(lián)叶(yè)东(dōng)，(，)鱼(yú)戏(xì)莲(lián)叶(yè)西(xī)，(，)鱼(yú)戏(xì)莲(lián)叶(yè)南(nán)，(，)鱼(yú)戏(xì)莲(lián)叶(yè)北(běi)。(。)"
-    },
-    {
-        "name": "长歌行",
-        "trans": [],
-        "title": "长歌行",
-        "author": "汉乐府",
-        "notation": "青(qīng)青(qīng)园(yuán)中(zhōng)葵(kuí)，(，)朝(zhāo)露(lù)待(dài)日(rì)晞(xī)。(。)阳(yáng)春(chūn)布(bù)德(dé)泽(zé)，(，)万(wàn)物(wù)生(shēng)光(guāng)辉(huī)。(。)常(cháng)恐(kǒng)秋(qiū)节(jié)至(zhì)，(，)焜(kūn)黄(huáng)华(huá)叶(yè)衰(shuāi)。(。)百(bǎi)川(chuān)东(dōng)到(dào)海(hǎi)，(，)何(hé)时(shí)复(fù)西(xī)归(guī)。(。)少(shào)壮(zhuàng)不(bù)努(nǔ)力(lì)，(，)老(lǎo)大(dà)徒(tú)伤(shāng)悲(bēi)。(。)"
-    },
-    {
-        "name": "七步诗",
-        "trans": [],
-        "title": "七步诗",
-        "author": "曹植",
-        "notation": "煮(zhǔ)豆(dòu)持(chí)作(zuò)羹(gēng)，(，)漉(lù)菽(shū)以(yǐ)为(wéi)汁(zhī)。(。)萁(qí)在(zài)釜(fǔ)下(xià)燃(rán)，(，)豆(dòu)在(zài)釜(fǔ)中(zhōng)泣(qì)。(。)本(běn)是(shì)同(tóng)根(gēn)生(shēng)，(，)相(xiāng)煎(jiān)何(hé)太(tài)急(jí)？(？)"
-    },
-    {
-        "name": "敕勒歌",
-        "trans": [],
-        "title": "敕勒歌",
-        "author": "乐府诗集",
-        "notation": "敕(chì)勒(lè)川(chuān)，(，)阴(yīn)山(shān)下(xià)。(。)天(tiān)似(sì)穹(qióng)庐(lú)，(，)笼(lǒng)盖(gài)四(sì)野(yě)。(。)天(tiān)苍(cāng)苍(cāng)，(，)野(yě)茫(máng)茫(máng)，(，)风(fēng)吹(chuī)草(cǎo)低(dī)见(xiàn)牛(niú)羊(yáng)。(。)"
-    },
-    {
-        "name": "咏鹅",
-        "trans": [],
-        "title": "咏鹅",
-        "author": "骆宾王",
-        "notation": "鹅(é)，(，)鹅(é)，(，)鹅(é)，(，)曲(qū)项(xiàng)向(xiàng)天(tiān)歌(gē)。(。)白(bái)毛(máo)浮(fú)绿(lǜ)水(shuǐ)，(，)红(hóng)掌(zhǎng)拨(bō)清(qīng)波(bō)。(。)"
-    },
-    {
-        "name": "风",
-        "trans": [],
-        "title": "风",
-        "author": "李峤",
-        "notation": "解(jiě)落(luò)三(sān)秋(qiū)叶(yè)，(，)能(néng)开(kāi)二(èr)月(yuè)花(huā)。(。)过(guò)江(jiāng)千(qiān)尺(chǐ)浪(làng)，(，)入(rù)竹(zhú)万(wàn)竿(gān)斜(xié)。(。)"
-    },
-    {
-        "name": "回乡偶书二首·其一",
-        "trans": [],
-        "title": "回乡偶书二首·其一",
-        "author": "贺知章",
-        "notation": "少(shào)小(xiǎo)离(lí)家(jiā)老(lǎo)大(dà)回(huí)，(，)乡(xiāng)音(yīn)无(wú)改(gǎi)鬓(bìn)毛(máo)衰(cuī)。(。)儿(ér)童(tóng)相(xiāng)见(jiàn)不(bù)相(xiāng)识(shí)，(，)笑(xiào)问(wèn)客(kè)从(cóng)何(hé)处(chù)来(lái)。(。)"
-    },
-    {
-        "name": "咏柳",
-        "trans": [],
-        "title": "咏柳",
-        "author": "贺知章",
-        "notation": "碧(bì)玉(yù)妆(zhuāng)成(chéng)一(yī)树(shù)高(gāo)，(，)万(wàn)条(tiáo)垂(chuí)下(xià)绿(lǜ)丝(sī)绦(tāo)。(。)不(bù)知(zhī)细(xì)叶(yè)谁(shuí)裁(cái)出(chū)，(，)二(èr)月(yuè)春(chūn)风(fēng)似(sì)剪(jiǎn)刀(dāo)。(。)"
-    },
-    {
-        "name": "凉州词",
-        "trans": [],
-        "title": "凉州词",
-        "author": "王之涣",
-        "notation": "黄(huáng)河(hé)远(yuǎn)上(shàng)白(bái)云(yún)间(jiān)，(，)一(yī)片(piàn)孤(gū)城(chéng)万(wàn)仞(rèn)山(shān)。(。)羌(qiāng)笛(dí)何(hé)须(xū)怨(yuàn)杨(yáng)柳(liǔ)，(，)春(chūn)风(fēng)不(bù)度(dù)玉(yù)门(mén)关(guān)。(。)"
-    },
-    {
-        "name": "登鹳雀楼",
-        "trans": [],
-        "title": "登鹳雀楼",
-        "author": "王之涣",
-        "notation": "白(bái)日(rì)依(yī)山(shān)尽(jìn)，(，)黄(huáng)河(hé)入(rù)海(hǎi)流(liú)。(。)欲(yù)穷(qióng)千(qiān)里(lǐ)目(mù)，(，)更(gèng)上(shàng)一(yī)层(céng)楼(lóu)。(。)"
-    },
-    {
-        "name": "春晓",
-        "trans": [],
-        "title": "春晓",
-        "author": "孟浩然",
-        "notation": "春(chūn)眠(mián)不(bù)觉(jué)晓(xiǎo)，(，)处(chù)处(chù)闻(wén)啼(tí)鸟(niǎo)。(。)夜(yè)来(lái)风(fēng)雨(yǔ)声(shēng)，(，)花(huā)落(luò)知(zhī)多(duō)少(shǎo)。(。)"
-    },
-    {
-        "name": "宿建德江",
-        "trans": [],
-        "title": "宿建德江",
-        "author": "孟浩然",
-        "notation": "移(yí)舟(zhōu)泊(bó)烟(yān)渚(zhǔ)，(，)日(rì)暮(mù)客(kè)愁(chóu)新(xīn)。(。)野(yě)旷(kuàng)天(tiān)低(dī)树(shù)，(，)江(jiāng)清(qīng)月(yuè)近(jìn)人(rén)。(。)"
-    },
-    {
-        "name": "凉州词",
-        "trans": [],
-        "title": "凉州词",
-        "author": "王翰",
-        "notation": "葡(pú)萄(táo)美(měi)酒(jiǔ)夜(yè)光(guāng)杯(bēi)，(，)欲(yù)饮(yǐn)琵(pí)琶(pá)马(mǎ)上(shàng)催(cuī)。(。)醉(zuì)卧(wò)沙(shā)场(chǎng)君(jūn)莫(mò)笑(xiào)，(，)古(gǔ)来(lái)征(zhēng)战(zhàn)几(jǐ)人(rén)回(huí)？(？)"
-    },
-    {
-        "name": "出塞",
-        "trans": [],
-        "title": "出塞",
-        "author": "王昌龄",
-        "notation": "秦(qín)时(shí)明(míng)月(yuè)汉(hàn)时(shí)关(guān)，(，)万(wàn)里(lǐ)长(cháng)征(zhēng)人(rén)未(wèi)还(huán)。(。)但(dàn)使(shǐ)龙(lóng)城(chéng)飞(fēi)将(jiàng)在(zài)，(，)不(bù)教(jiào)胡(hú)马(mǎ)渡(dù)阴(yīn)山(shān)。(。)"
-    },
-    {
-        "name": "芙蓉楼送辛渐",
-        "trans": [],
-        "title": "芙蓉楼送辛渐",
-        "author": "王昌龄",
-        "notation": "寒(hán)雨(yǔ)连(lián)江(jiāng)夜(yè)入(rù)吴(wú)，(，)平(píng)明(míng)送(sòng)客(kè)楚(chǔ)山(shān)孤(gū)。(。)洛(luò)阳(yáng)亲(qīn)友(yǒu)如(rú)相(xiāng)问(wèn)，(，)一(yī)片(piàn)冰(bīng)心(xīn)在(zài)玉(yù)壶(hú)。(。)"
-    },
-    {
-        "name": "从军行七首·其四",
-        "trans": [],
-        "title": "从军行七首·其四",
-        "author": "王昌龄",
-        "notation": "青(qīng)海(hǎi)长(cháng)云(yún)暗(àn)雪(xuě)山(shān)，(，)孤(gū)城(chéng)遥(yáo)望(wàng)玉(yù)门(mén)关(guān)。(。)黄(huáng)沙(shā)百(bǎi)战(zhàn)穿(chuān)金(jīn)甲(jiǎ)，(，)不(bù)破(pò)楼(lóu)兰(lán)终(zhōng)不(bù)还(huán)。(。)"
-    },
-    {
-        "name": "鹿柴",
-        "trans": [],
-        "title": "鹿柴",
-        "author": "王维",
-        "notation": "空(kōng)山(shān)不(bù)见(jiàn)人(rén)，(，)但(dàn)闻(wén)人(rén)语(yǔ)响(xiǎng)。(。)返(fǎn)景(jǐng)入(rù)深(shēn)林(lín)，(，)复(fù)照(zhào)青(qīng)苔(tái)上(shàng)。(。)"
-    },
-    {
-        "name": "九月九日忆山东兄弟",
-        "trans": [],
-        "title": "九月九日忆山东兄弟",
-        "author": "王维",
-        "notation": "独(dú)在(zài)异(yì)乡(xiāng)为(wéi)异(yì)客(kè)，(，)每(měi)逢(féng)佳(jiā)节(jié)倍(bèi)思(sī)亲(qīn)。(。)遥(yáo)知(zhī)兄(xiōng)弟(dì)登(dēng)高(gāo)处(chù)，(，)遍(biàn)插(chā)茱(zhū)萸(yú)少(shǎo)一(yī)人(rén)。(。)"
-    },
-    {
-        "name": "送元二使安西",
-        "trans": [],
-        "title": "送元二使安西",
-        "author": "王维",
-        "notation": "渭(wèi)城(chéng)朝(zhāo)雨(yǔ)浥(yì)轻(qīng)尘(chén)，(，)客(kè)舍(shè)青(qīng)青(qīng)柳(liǔ)色(sè)新(xīn)。(。)劝(quàn)君(jūn)更(gèng)尽(jìn)一(yī)杯(bēi)酒(jiǔ)，(，)西(xī)出(chū)阳(yáng)关(guān)无(wú)故(gù)人(rén)。(。)"
-    },
-    {
-        "name": "竹里馆",
-        "trans": [],
-        "title": "竹里馆",
-        "author": "王维",
-        "notation": "独(dú)坐(zuò)幽(yōu)篁(huáng)里(lǐ)，(，)弹(tán)琴(qín)复(fù)长(cháng)啸(xiào)。(。)深(shēn)林(lín)人(rén)不(bù)知(zhī)，(，)明(míng)月(yuè)来(lái)相(xiāng)照(zhào)。(。)"
-    },
-    {
-        "name": "静夜思",
-        "trans": [],
-        "title": "静夜思",
-        "author": "李白",
-        "notation": "床(chuáng)前(qián)明(míng)月(yuè)光(guāng)，(，)疑(yí)是(shì)地(dì)上(shàng)霜(shuāng)。(。)举(jǔ)头(tóu)望(wàng)明(míng)月(yuè)，(，)低(dī)头(tóu)思(sī)故(gù)乡(xiāng)。(。)"
-    },
-    {
-        "name": "黄鹤楼送孟浩然之广陵",
-        "trans": [],
-        "title": "黄鹤楼送孟浩然之广陵",
-        "author": "李白",
-        "notation": "故(gù)人(rén)西(xī)辞(cí)黄(huáng)鹤(hè)楼(lóu)，(，)烟(yān)花(huā)三(sān)月(yuè)下(xià)扬(yáng)州(zhōu)。(。)孤(gū)帆(fān)远(yuǎn)影(yǐng)碧(bì)空(kōng)尽(jìn)，(，)唯(wéi)见(jiàn)长(cháng)江(jiāng)天(tiān)际(jì)流(liú)。(。)"
-    },
-    {
-        "name": "赠汪伦",
-        "trans": [],
-        "title": "赠汪伦",
-        "author": "李白",
-        "notation": "李(lǐ)白(bái)乘(chéng)舟(zhōu)将(jiāng)欲(yù)行(xíng)，(，)忽(hū)闻(wén)岸(àn)上(shàng)踏(tà)歌(gē)声(shēng)。(。)桃(táo)花(huā)潭(tán)水(shuǐ)深(shēn)千(qiān)尺(chǐ)，(，)不(bù)及(jí)汪(wāng)伦(lún)送(sòng)我(wǒ)情(qíng)。(。)"
-    },
-    {
-        "name": "秋浦歌·白发三千丈",
-        "trans": [],
-        "title": "秋浦歌·白发三千丈",
-        "author": "李白",
-        "notation": "白(bái)发(fà)三(sān)千(qiān)丈(zhàng)，(，)缘(yuán)愁(chóu)似(sì)个(gè)长(cháng)。(。)不(bù)知(zhī)明(míng)镜(jìng)里(lǐ)，(，)何(hé)处(chù)得(dé)秋(qiū)霜(shuāng)。(。)"
-    },
-    {
-        "name": "古朗月行",
-        "trans": [],
-        "title": "古朗月行",
-        "author": "李白",
-        "notation": "小(xiǎo)时(shí)不(bù)识(shí)月(yuè)，(，)呼(hū)作(zuò)白(bái)玉(yù)盘(pán)。(。)又(yòu)疑(yí)瑶(yáo)台(tái)镜(jìng)，(，)飞(fēi)在(zài)青(qīng)云(yún)端(duān)。(。)仙(xiān)人(rén)垂(chuí)两(liǎng)足(zú)，(，)桂(guì)树(shù)何(hé)团(tuán)团(tuán)。(。)白(bái)兔(tù)捣(dǎo)药(yào)成(chéng)，(，)问(wèn)言(yán)与(yǔ)谁(shuí)餐(cān)。(。)"
-    },
-    {
-        "name": "独坐敬亭山",
-        "trans": [],
-        "title": "独坐敬亭山",
-        "author": "李白",
-        "notation": "众(zhòng)鸟(niǎo)高(gāo)飞(fēi)尽(jìn)，(，)孤(gū)云(yún)独(dú)去(qù)闲(xián)。(。)相(xiāng)看(kàn)两(liǎng)不(bù)厌(yàn)，(，)只(zhǐ)有(yǒu)敬(jìng)亭(tíng)山(shān)。(。)"
-    },
-    {
-        "name": "早发白帝城",
-        "trans": [],
-        "title": "早发白帝城",
-        "author": "李白",
-        "notation": "朝(zhāo)辞(cí)白(bái)帝(dì)彩(cǎi)云(yún)间(jiān)，(，)千(qiān)里(lǐ)江(jiāng)陵(líng)一(yī)日(rì)还(huán)。(。)两(liǎng)岸(àn)猿(yuán)声(shēng)啼(tí)不(bù)住(zhù)，(，)轻(qīng)舟(zhōu)已(yǐ)过(guò)万(wàn)重(chóng)山(shān)。(。)"
-    },
-    {
-        "name": "望庐山瀑布",
-        "trans": [],
-        "title": "望庐山瀑布",
-        "author": "李白",
-        "notation": "日(rì)照(zhào)香(xiāng)炉(lú)生(shēng)紫(zǐ)烟(yān)，(，)遥(yáo)看(kàn)瀑(pù)布(bù)挂(guà)前(qián)川(chuān)。(。)飞(fēi)流(liú)直(zhí)下(xià)三(sān)千(qiān)尺(chǐ)，(，)疑(yí)是(shì)银(yín)河(hé)落(luò)九(jiǔ)天(tiān)。(。)"
-    },
-    {
-        "name": "望天门山",
-        "trans": [],
-        "title": "望天门山",
-        "author": "李白",
-        "notation": "天(tiān)门(mén)中(zhōng)断(duàn)楚(chǔ)江(jiāng)开(kāi)，(，)碧(bì)水(shuǐ)东(dōng)流(liú)至(zhì)此(cǐ)回(huí)。(。)两(liǎng)岸(àn)青(qīng)山(shān)相(xiāng)对(duì)出(chū)，(，)孤(gū)帆(fān)一(yī)片(piàn)日(rì)边(biān)来(lái)。(。)"
-    },
-    {
-        "name": "逢雪宿芙蓉山主人",
-        "trans": [],
-        "title": "逢雪宿芙蓉山主人",
-        "author": "刘长卿",
-        "notation": "日(rì)暮(mù)苍(cāng)山(shān)远(yuǎn)，(，)天(tiān)寒(hán)白(bái)屋(wū)贫(pín)。(。)柴(chái)门(mén)闻(wén)犬(quǎn)吠(fèi)，(，)风(fēng)雪(xuě)夜(yè)归(guī)人(rén)。(。)"
-    },
-    {
-        "name": "寒食",
-        "trans": [],
-        "title": "寒食",
-        "author": "韩翃",
-        "notation": "春(chūn)城(chéng)无(wú)处(chù)不(bù)飞(fēi)花(huā)，(，)寒(hán)食(shí)东(dōng)风(fēng)御(yù)柳(liǔ)斜(xié)。(。)日(rì)暮(mù)汉(hàn)宫(gōng)传(chuán)蜡(là)烛(zhú)，(，)轻(qīng)烟(yān)散(sàn)入(rù)五(wǔ)侯(hóu)家(jiā)。(。)"
-    },
-    {
-        "name": "别董大",
-        "trans": [],
-        "title": "别董大",
-        "author": "高适",
-        "notation": "千(qiān)里(lǐ)黄(huáng)云(yún)白(bái)日(rì)曛(xūn)，(，)北(běi)风(fēng)吹(chuī)雁(yàn)雪(xuě)纷(fēn)纷(fēn)。(。)莫(mò)愁(chóu)前(qián)路(lù)无(wú)知(zhī)己(jǐ)，(，)天(tiān)下(xià)谁(shuí)人(rén)不(bù)识(shí)君(jūn)。(。)"
-    },
-    {
-        "name": "绝句·两个黄鹂鸣翠柳",
-        "trans": [],
-        "title": "绝句·两个黄鹂鸣翠柳",
-        "author": "杜甫",
-        "notation": "两(liǎng)个(gè)黄(huáng)鹂(lí)鸣(míng)翠(cuì)柳(liǔ)，(，)一(yī)行(háng)白(bái)鹭(lù)上(shàng)青(qīng)天(tiān)。(。)窗(chuāng)含(hán)西(xī)岭(lǐng)千(qiān)秋(qiū)雪(xuě)，(，)门(mén)泊(bó)东(dōng)吴(wú)万(wàn)里(lǐ)船(chuán)。(。)"
-    },
-    {
-        "name": "绝句·迟日江山丽",
-        "trans": [],
-        "title": "绝句·迟日江山丽",
-        "author": "杜甫",
-        "notation": "迟(chí)日(rì)江(jiāng)山(shān)丽(lì)，(，)春(chūn)风(fēng)花(huā)草(cǎo)香(xiāng)。(。)泥(ní)融(róng)飞(fēi)燕(yàn)子(zǐ)，(，)沙(shā)暖(nuǎn)睡(shuì)鸳(yuān)鸯(yāng)。(。)"
-    },
-    {
-        "name": "春夜喜雨",
-        "trans": [],
-        "title": "春夜喜雨",
-        "author": "杜甫",
-        "notation": "好(hǎo)雨(yǔ)知(zhī)时(shí)节(jié)，(，)当(dāng)春(chūn)乃(nǎi)发(fā)生(shēng)。(。)随(suí)风(fēng)潜(qián)入(rù)夜(yè)，(，)润(rùn)物(wù)细(xì)无(wú)声(shēng)。(。)野(yě)径(jìng)云(yún)俱(jù)黑(hēi)，(，)江(jiāng)船(chuán)火(huǒ)独(dú)明(míng)。(。)晓(xiǎo)看(kàn)红(hóng)湿(shī)处(chù)，(，)花(huā)重(zhòng)锦(jǐn)官(guān)城(chéng)。(。)"
-    },
-    {
-        "name": "江畔独步寻花其五",
-        "trans": [],
-        "title": "江畔独步寻花其五",
-        "author": "杜甫",
-        "notation": "黄(huáng)师(shī)塔(tǎ)前(qián)江(jiāng)水(shuǐ)东(dōng)，(，)春(chūn)光(guāng)懒(lǎn)困(kùn)倚(yǐ)微(wēi)风(fēng)。(。)桃(táo)花(huā)一(yī)簇(cù)开(kāi)无(wú)主(zhǔ)，(，)可(kě)爱(ài)深(shēn)红(hóng)爱(ài)浅(qiǎn)红(hóng)？(？)"
-    },
-    {
-        "name": "江南逢李龟年",
-        "trans": [],
-        "title": "江南逢李龟年",
-        "author": "杜甫",
-        "notation": "岐(qí)王(wáng)宅(zhái)里(lǐ)寻(xún)常(cháng)见(jiàn)，(，)崔(cuī)九(jiǔ)堂(táng)前(qián)几(jǐ)度(dù)闻(wén)。(。)正(zhèng)是(shì)江(jiāng)南(nán)好(hǎo)风(fēng)景(jǐng)，(，)落(luò)花(huā)时(shí)节(jié)又(yòu)逢(féng)君(jūn)。(。)"
-    },
-    {
-        "name": "赠花卿",
-        "trans": [],
-        "title": "赠花卿",
-        "author": "杜甫",
-        "notation": "锦(jǐn)城(chéng)丝(sī)管(guǎn)日(rì)纷(fēn)纷(fēn)，(，)半(bàn)入(rù)江(jiāng)风(fēng)半(bàn)入(rù)云(yún)。(。)此(cǐ)曲(qǔ)只(zhǐ)应(yīng)天(tiān)上(shàng)有(yǒu)，(，)人(rén)间(jiān)能(néng)得(dé)几(jǐ)回(huí)闻(wén)。(。)"
-    },
-    {
-        "name": "闻官军收河南河北",
-        "trans": [],
-        "title": "闻官军收河南河北",
-        "author": "杜甫",
-        "notation": "剑(jiàn)外(wài)忽(hū)传(chuán)收(shōu)蓟(jì)北(běi)，(，)初(chū)闻(wén)涕(tì)泪(lèi)满(mǎn)衣(yī)裳(shang)。(。)却(què)看(kàn)妻(qī)子(zǐ)愁(chóu)何(hé)在(zài)，(，)漫(màn)卷(juǎn)诗(shī)书(shū)喜(xǐ)欲(yù)狂(kuáng)。(。)白(bái)日(rì)放(fàng)歌(gē)须(xū)纵(zòng)酒(jiǔ)，(，)青(qīng)春(chūn)作(zuò)伴(bàn)好(hǎo)还(huán)乡(xiāng)。(。)即(jí)从(cóng)巴(bā)峡(xiá)穿(chuān)巫(wū)峡(xiá)，(，)便(biàn)下(xià)襄(xiāng)阳(yáng)向(xiàng)洛(luò)阳(yáng)。(。)"
-    },
-    {
-        "name": "枫桥夜泊",
-        "trans": [],
-        "title": "枫桥夜泊",
-        "author": "张继",
-        "notation": "月(yuè)落(luò)乌(wū)啼(tí)霜(shuāng)满(mǎn)天(tiān)，(，)江(jiāng)枫(fēng)渔(yú)火(huǒ)对(duì)愁(chóu)眠(mián)。(。)姑(gū)苏(sū)城(chéng)外(wài)寒(hán)山(shān)寺(sì)，(，)夜(yè)半(bàn)钟(zhōng)声(shēng)到(dào)客(kè)船(chuán)。(。)"
-    },
-    {
-        "name": "滁州西涧",
-        "trans": [],
-        "title": "滁州西涧",
-        "author": "韦应物",
-        "notation": "独(dú)怜(lián)幽(yōu)草(cǎo)涧(jiàn)边(biān)生(shēng)，(，)上(shàng)有(yǒu)黄(huáng)鹂(lí)深(shēn)树(shù)鸣(míng)。(。)春(chūn)潮(cháo)带(dài)雨(yǔ)晚(wǎn)来(lái)急(jí)，(，)野(yě)渡(dù)无(wú)人(rén)舟(zhōu)自(zì)横(héng)。(。)"
-    },
-    {
-        "name": "游子吟",
-        "trans": [],
-        "title": "游子吟",
-        "author": "孟郊",
-        "notation": "慈(cí)母(mǔ)手(shǒu)中(zhōng)线(xiàn)，(，)游(yóu)子(zǐ)身(shēn)上(shàng)衣(yī)。(。)临(lín)行(xíng)密(mì)密(mì)缝(féng)，(，)意(yì)恐(kǒng)迟(chí)迟(chí)归(guī)。(。)谁(shuí)言(yán)寸(cùn)草(cǎo)心(xīn)，(，)报(bào)得(dé)三(sān)春(chūn)晖(huī)。(。)"
-    },
-    {
-        "name": "早春呈水部张十八员外",
-        "trans": [],
-        "title": "早春呈水部张十八员外",
-        "author": "韩愈",
-        "notation": "天(tiān)街(jiē)小(xiǎo)雨(yǔ)润(rùn)如(rú)酥(sū)，(，)草(cǎo)色(sè)遥(yáo)看(kàn)近(jìn)却(què)无(wú)。(。)最(zuì)是(shì)一(yī)年(nián)春(chūn)好(hǎo)处(chù)，(，)绝(jué)胜(shèng)烟(yān)柳(liǔ)满(mǎn)皇(huáng)都(dū)。(。)"
-    },
-    {
-        "name": "渔歌子",
-        "trans": [],
-        "title": "渔歌子",
-        "author": "张志和",
-        "notation": "西(xī)塞(sài)山(shān)前(qián)白(bái)鹭(lù)飞(fēi)，(，)桃(táo)花(huā)流(liú)水(shuǐ)鳜(guì)鱼(yú)肥(féi)。(。)青(qīng)箬(ruò)笠(lì)，(，)绿(lǜ)蓑(suō)衣(yī)，(，)斜(xié)风(fēng)细(xì)雨(yǔ)不(bù)须(xū)归(guī)。(。)"
-    },
-    {
-        "name": "塞下曲",
-        "trans": [],
-        "title": "塞下曲",
-        "author": "卢纶",
-        "notation": "月(yuè)黑(hēi)雁(yàn)飞(fēi)高(gāo)，(，)单(chán)于(yú)夜(yè)遁(dùn)逃(táo)。(。)欲(yù)将(jiāng)轻(qīng)骑(qí)逐(zhú)，(，)大(dà)雪(xuě)满(mǎn)弓(gōng)刀(dāo)。(。)"
-    },
-    {
-        "name": "望洞庭",
-        "trans": [],
-        "title": "望洞庭",
-        "author": "刘禹锡",
-        "notation": "湖(hú)光(guāng)秋(qiū)月(yuè)两(liǎng)相(xiāng)和(hé)，(，)潭(tán)面(miàn)无(wú)风(fēng)镜(jìng)未(wèi)磨(mó)。(。)遥(yáo)望(wàng)洞(dòng)庭(tíng)山(shān)水(shuǐ)翠(cuì)，(，)白(bái)银(yín)盘(pán)里(lǐ)一(yī)青(qīng)螺(luó)。(。)"
-    },
-    {
-        "name": "浪淘沙",
-        "trans": [],
-        "title": "浪淘沙",
-        "author": "刘禹锡",
-        "notation": "九(jiǔ)曲(qū)黄(huáng)河(hé)万(wàn)里(lǐ)沙(shā)，(，)浪(làng)淘(táo)风(fēng)簸(bǒ)自(zì)天(tiān)涯(yá)。(。)如(rú)今(jīn)直(zhí)上(shàng)银(yín)河(hé)去(qù)，(，)同(tóng)到(dào)牵(qiān)牛(niú)织(zhī)女(nǚ)家(jiā)。(。)"
-    },
-    {
-        "name": "竹枝词",
-        "trans": [],
-        "title": "竹枝词",
-        "author": "刘禹锡",
-        "notation": "杨(yáng)柳(liǔ)青(qīng)青(qīng)江(jiāng)水(shuǐ)平(píng)，(，)闻(wén)郎(láng)江(jiāng)上(shàng)唱(chàng)歌(gē)声(shēng)。(。)东(dōng)边(biān)日(rì)出(chū)西(xī)边(biān)雨(yǔ)，(，)道(dào)是(shì)无(wú)晴(qíng)还(hái)有(yǒu)晴(qíng)。(。)"
-    },
-    {
-        "name": "乌衣巷",
-        "trans": [],
-        "title": "乌衣巷",
-        "author": "刘禹锡",
-        "notation": "朱(zhū)雀(què)桥(qiáo)边(biān)野(yě)草(cǎo)花(huā)，(，)乌(wū)衣(yī)巷(xiàng)口(kǒu)夕(xī)阳(yáng)斜(xié)。(。)旧(jiù)时(shí)王(wáng)谢(xiè)堂(táng)前(qián)燕(yàn)，(，)飞(fēi)入(rù)寻(xún)常(cháng)百(bǎi)姓(xìng)家(jiā)。(。)"
-    },
-    {
-        "name": "商山早行",
-        "trans": [],
-        "title": "商山早行",
-        "author": "温庭筠",
-        "notation": "晨(chén)起(qǐ)动(dòng)征(zhēng)铎(duó)，(，)客(kè)行(xíng)悲(bēi)故(gù)乡(xiāng)。(。)鸡(jī)声(shēng)茅(máo)店(diàn)月(yuè)，(，)人(rén)迹(jì)板(bǎn)桥(qiáo)霜(shuāng)。(。)槲(hú)叶(yè)落(luò)山(shān)路(lù)，(，)枳(zhǐ)花(huā)明(míng)驿(yì)墙(qiáng)。(。)因(yīn)思(sī)杜(dù)陵(líng)梦(mèng)，(，)凫(fú)雁(yàn)满(mǎn)回(huí)塘(táng)。(。)"
-    },
-    {
-        "name": "乐游原",
-        "trans": [],
-        "title": "乐游原",
-        "author": "李商隐",
-        "notation": "向(xiàng)晚(wǎn)意(yì)不(bù)适(shì)，(，)驱(qū)车(chē)登(dēng)古(gǔ)原(yuán)。(。)夕(xī)阳(yáng)无(wú)限(xiàn)好(hǎo)，(，)只(zhǐ)是(shì)近(jìn)黄(huáng)昏(hūn)。(。)"
-    },
-    {
-        "name": "池上",
-        "trans": [],
-        "title": "池上",
-        "author": "白居易",
-        "notation": "小(xiǎo)娃(wá)撑(chēng)小(xiǎo)艇(tǐng)，(，)偷(tōu)采(cǎi)白(bái)莲(lián)回(huí)。(。)不(bù)解(jiě)藏(cáng)踪(zōng)迹(jì)，(，)浮(fú)萍(píng)一(yī)道(dào)开(kāi)。(。)"
-    },
-    {
-        "name": "忆江南",
-        "trans": [],
-        "title": "忆江南",
-        "author": "白居易",
-        "notation": "江(jiāng)南(nán)好(hǎo)，(，)风(fēng)景(jǐng)旧(jiù)曾(céng)谙(ān)。(。)日(rì)出(chū)江(jiāng)花(huā)红(hóng)胜(shèng)火(huǒ)，(，)春(chūn)来(lái)江(jiāng)水(shuǐ)绿(lǜ)如(rú)蓝(lán)。(。)能(néng)不(bù)忆(yì)江(jiāng)南(nán)？(？)"
-    },
-    {
-        "name": "赋得古原草送别",
-        "trans": [],
-        "title": "赋得古原草送别",
-        "author": "白居易",
-        "notation": "离(lí)离(lí)原(yuán)上(shàng)草(cǎo)，(，)一(yī)岁(suì)一(yī)枯(kū)荣(róng)。(。)野(yě)火(huǒ)烧(shāo)不(bù)尽(jìn)，(，)春(chūn)风(fēng)吹(chuī)又(yòu)生(shēng)。(。)远(yuǎn)芳(fāng)侵(qīn)古(gǔ)道(dào)，(，)晴(qíng)翠(cuì)接(jiē)荒(huāng)城(chéng)。(。)又(yòu)送(sòng)王(wáng)孙(sūn)去(qù)，(，)萋(qī)萋(qī)满(mǎn)别(bié)情(qíng)。(。)"
-    },
-    {
-        "name": "小儿垂钓",
-        "trans": [],
-        "title": "小儿垂钓",
-        "author": "胡令能",
-        "notation": "蓬(péng)头(tóu)稚(zhì)子(zǐ)学(xué)垂(chuí)纶(lún)，(，)侧(cè)坐(zuò)莓(méi)苔(tái)草(cǎo)映(yìng)身(shēn)。(。)路(lù)人(rén)借(jiè)问(wèn)遥(yáo)招(zhāo)手(shǒu)，(，)怕(pà)得(dé)鱼(yú)惊(jīng)不(bù)应(yìng)人(rén)。(。)"
-    },
-    {
-        "name": "悯农二首·其一",
-        "trans": [],
-        "title": "悯农二首·其一",
-        "author": "李绅",
-        "notation": "春(chūn)种(zhòng)一(yī)粒(lì)粟(sù)，(，)秋(qiū)收(shōu)万(wàn)颗(kē)子(zǐ)。(。)四(sì)海(hǎi)无(wú)闲(xián)田(tián)，(，)农(nóng)夫(fū)犹(yóu)饿(è)死(sǐ)。(。)"
-    },
-    {
-        "name": "悯农二首·其二",
-        "trans": [],
-        "title": "悯农二首·其二",
-        "author": "李绅",
-        "notation": "锄(chú)禾(hé)日(rì)当(dāng)午(wǔ)，(，)汗(hàn)滴(dī)禾(hé)下(xià)土(tǔ)。(。)谁(shuí)知(zhī)盘(pán)中(zhōng)餐(cān)，(，)粒(lì)粒(lì)皆(jiē)辛(xīn)苦(kǔ)。(。)"
-    },
-    {
-        "name": "江雪",
-        "trans": [],
-        "title": "江雪",
-        "author": "柳宗元",
-        "notation": "千(qiān)山(shān)鸟(niǎo)飞(fēi)绝(jué)，(，)万(wàn)径(jìng)人(rén)踪(zōng)灭(miè)。(。)孤(gū)舟(zhōu)蓑(suō)笠(lì)翁(wēng)，(，)独(dú)钓(diào)寒(hán)江(jiāng)雪(xuě)。(。)"
-    },
-    {
-        "name": "寻隐者不遇",
-        "trans": [],
-        "title": "寻隐者不遇",
-        "author": "贾岛",
-        "notation": "松(sōng)下(xià)问(wèn)童(tóng)子(zǐ)，(，)言(yán)师(shī)采(cǎi)药(yào)去(qù)。(。)只(zhǐ)在(zài)此(cǐ)山(shān)中(zhōng)，(，)云(yún)深(shēn)不(bù)知(zhī)处(chù)。(。)"
-    },
-    {
-        "name": "山行",
-        "trans": [],
-        "title": "山行",
-        "author": "杜牧",
-        "notation": "远(yuǎn)上(shàng)寒(hán)山(shān)石(shí)径(jìng)斜(xié)，(，)白(bái)云(yún)生(shēng)处(chù)有(yǒu)人(rén)家(jiā)。(。)停(tíng)车(chē)坐(zuò)爱(ài)枫(fēng)林(lín)晚(wǎn)，(，)霜(shuāng)叶(yè)红(hóng)于(yú)二(èr)月(yuè)花(huā)。(。)"
-    },
-    {
-        "name": "江南春",
-        "trans": [],
-        "title": "江南春",
-        "author": "杜牧",
-        "notation": "千(qiān)里(lǐ)莺(yīng)啼(tí)绿(lǜ)映(yìng)红(hóng)，(，)水(shuǐ)村(cūn)山(shān)郭(guō)酒(jiǔ)旗(qí)风(fēng)。(。)南(nán)朝(cháo)四(sì)百(bǎi)八(bā)十(shí)寺(sì)，(，)多(duō)少(shǎo)楼(lóu)台(tái)烟(yān)雨(yǔ)中(zhōng)。(。)"
-    },
-    {
-        "name": "清明",
-        "trans": [],
-        "title": "清明",
-        "author": "杜牧",
-        "notation": "清(qīng)明(míng)时(shí)节(jié)雨(yǔ)纷(fēn)纷(fēn)，(，)路(lù)上(shàng)行(xíng)人(rén)欲(yù)断(duàn)魂(hún)。(。)借(jiè)问(wèn)酒(jiǔ)家(jiā)何(hé)处(chù)有(yǒu)？(？)牧(mù)童(tóng)遥(yáo)指(zhǐ)杏(xìng)花(huā)村(cūn)。(。)"
-    },
-    {
-        "name": "秋夕",
-        "trans": [],
-        "title": "秋夕",
-        "author": "杜牧",
-        "notation": "银(yín)烛(zhú)秋(qiū)光(guāng)冷(lěng)画(huà)屏(píng)，(，)轻(qīng)罗(luó)小(xiǎo)扇(shàn)扑(pū)流(liú)萤(yíng)。(。)天(tiān)阶(jiē)夜(yè)色(sè)凉(liáng)如(rú)水(shuǐ)，(，)坐(zuò)看(kàn)牵(qiān)牛(niú)织(zhī)女(nǚ)星(xīng)。(。)"
-    },
-    {
-        "name": "蜂",
-        "trans": [],
-        "title": "蜂",
-        "author": "罗隐",
-        "notation": "不(bù)论(lùn)平(píng)地(dì)与(yǔ)山(shān)尖(jiān)，(，)无(wú)限(xiàn)风(fēng)光(guāng)尽(jìn)被(bèi)占(zhàn)。(。)采(cǎi)得(dé)百(bǎi)花(huā)成(chéng)蜜(mì)后(hòu)，(，)为(wèi)谁(shuí)辛(xīn)苦(kǔ)为(wèi)谁(shuí)甜(tián)。(。)"
-    },
-    {
-        "name": "江上渔者",
-        "trans": [],
-        "title": "江上渔者",
-        "author": "范仲淹",
-        "notation": "江(jiāng)上(shàng)往(wǎng)来(lái)人(rén)，(，)但(dàn)爱(ài)鲈(lú)鱼(yú)美(měi)。(。)君(jūn)看(kàn)一(yī)叶(yè)舟(zhōu)，(，)出(chū)没(mò)风(fēng)波(bō)里(lǐ)。(。)"
-    },
-    {
-        "name": "元日",
-        "trans": [],
-        "title": "元日",
-        "author": "王安石",
-        "notation": "爆(bào)竹(zhú)声(shēng)中(zhōng)一(yī)岁(suì)除(chú)，(，)春(chūn)风(fēng)送(sòng)暖(nuǎn)入(rù)屠(tú)苏(sū)。(。)千(qiān)门(mén)万(wàn)户(hù)曈(tóng)曈(tóng)日(rì)，(，)总(zǒng)把(bǎ)新(xīn)桃(táo)换(huàn)旧(jiù)符(fú)。(。)"
-    },
-    {
-        "name": "泊船瓜洲",
-        "trans": [],
-        "title": "泊船瓜洲",
-        "author": "王安石",
-        "notation": "京(jīng)口(kǒu)瓜(guā)洲(zhōu)一(yī)水(shuǐ)间(jiān)，(，)钟(zhōng)山(shān)只(zhǐ)隔(gé)数(shù)重(chóng)山(shān)。(。)春(chūn)风(fēng)又(yòu)绿(lǜ)江(jiāng)南(nán)岸(àn)，(，)明(míng)月(yuè)何(hé)时(shí)照(zhào)我(wǒ)还(huán)。(。)"
-    },
-    {
-        "name": "书湖阴先生壁",
-        "trans": [],
-        "title": "书湖阴先生壁",
-        "author": "王安石",
-        "notation": "茅(máo)檐(yán)长(cháng)扫(sǎo)净(jìng)无(wú)苔(tái)，(，)花(huā)木(mù)成(chéng)畦(qí)手(shǒu)自(zì)栽(zāi)。(。)一(yī)水(shuǐ)护(hù)田(tián)将(jiāng)绿(lǜ)绕(rào)，(，)两(liǎng)山(shān)排(pái)闼(tà)送(sòng)青(qīng)来(lái)。(。)"
-    },
-    {
-        "name": "梅花",
-        "trans": [],
-        "title": "梅花",
-        "author": "王安石",
-        "notation": "墙(qiáng)角(jiǎo)数(shù)枝(zhī)梅(méi)，(，)凌(líng)寒(hán)独(dú)自(zì)开(kāi)。(。)遥(yáo)知(zhī)不(bù)是(shì)雪(xuě)，(，)为(wèi)有(yǒu)暗(àn)香(xiāng)来(lái)。(。)"
-    },
-    {
-        "name": "题西林壁",
-        "trans": [],
-        "title": "题西林壁",
-        "author": "苏轼",
-        "notation": "横(héng)看(kàn)成(chéng)岭(lǐng)侧(cè)成(chéng)峰(fēng)，(，)远(yuǎn)近(jìn)高(gāo)低(dī)各(gè)不(bù)同(tóng)。(。)不(bù)识(shí)庐(lú)山(shān)真(zhēn)面(miàn)目(mù)，(，)只(zhǐ)缘(yuán)身(shēn)在(zài)此(cǐ)山(shān)中(zhōng)。(。)"
-    },
-    {
-        "name": "饮湖上初晴后雨",
-        "trans": [],
-        "title": "饮湖上初晴后雨",
-        "author": "苏轼",
-        "notation": "水(shuǐ)光(guāng)潋(liàn)滟(yàn)晴(qíng)方(fāng)好(hǎo)，(，)山(shān)色(sè)空(kōng)蒙(méng)雨(yǔ)亦(yì)奇(qí)。(。)欲(yù)把(bǎ)西(xī)湖(hú)比(bǐ)西(xī)子(zǐ)，(，)淡(dàn)妆(zhuāng)浓(nóng)抹(mǒ)总(zǒng)相(xiāng)宜(yí)。(。)"
-    },
-    {
-        "name": "惠崇春江晚景二首·其一",
-        "trans": [],
-        "title": "惠崇春江晚景二首·其一",
-        "author": "苏轼",
-        "notation": "竹(zhú)外(wài)桃(táo)花(huā)三(sān)两(liǎng)枝(zhī)，(，)春(chūn)江(jiāng)水(shuǐ)暖(nuǎn)鸭(yā)先(xiān)知(zhī)。(。)蒌(lóu)蒿(hāo)满(mǎn)地(dì)芦(lú)芽(yá)短(duǎn)，(，)正(zhèng)是(shì)河(hé)豚(tún)欲(yù)上(shàng)时(shí)。(。)"
-    },
-    {
-        "name": "六月二十七日望湖楼醉书",
-        "trans": [],
-        "title": "六月二十七日望湖楼醉书",
-        "author": "苏轼",
-        "notation": "黑(hēi)云(yún)翻(fān)墨(mò)未(wèi)遮(zhē)山(shān)，(，)白(bái)雨(yǔ)跳(tiào)珠(zhū)乱(luàn)入(rù)船(chuán)。(。)卷(juǎn)地(dì)风(fēng)来(lái)忽(hū)吹(chuī)散(sàn)，(，)望(wàng)湖(hú)楼(lóu)下(xià)水(shuǐ)如(rú)天(tiān)。(。)"
-    },
-    {
-        "name": "夏日绝句",
-        "trans": [],
-        "title": "夏日绝句",
-        "author": "李清照",
-        "notation": "生(shēng)当(dāng)作(zuò)人(rén)杰(jié)，(，)死(sǐ)亦(yì)为(wéi)鬼(guǐ)雄(xióng)。(。)至(zhì)今(jīn)思(sī)项(xiàng)羽(yǔ)，(，)不(bù)肯(kěn)过(guò)江(jiāng)东(dōng)。(。)"
-    },
-    {
-        "name": "三衢道中",
-        "trans": [],
-        "title": "三衢道中",
-        "author": "曾几",
-        "notation": "梅(méi)子(zǐ)黄(huáng)时(shí)日(rì)日(rì)晴(qíng)，(，)小(xiǎo)溪(xī)泛(fàn)尽(jìn)却(què)山(shān)行(xíng)。(。)绿(lǜ)阴(yīn)不(bù)减(jiǎn)来(lái)时(shí)路(lù)，(，)添(tiān)得(dé)黄(huáng)鹂(lí)四(sì)五(wǔ)声(shēng)。(。)"
-    },
-    {
-        "name": "示儿",
-        "trans": [],
-        "title": "示儿",
-        "author": "陆游",
-        "notation": "死(sǐ)去(qù)元(yuán)知(zhī)万(wàn)事(shì)空(kōng)，(，)但(dàn)悲(bēi)不(bù)见(jiàn)九(jiǔ)州(zhōu)同(tóng)。(。)王(wáng)师(shī)北(běi)定(dìng)中(zhōng)原(yuán)日(rì)，(，)家(jiā)祭(jì)无(wú)忘(wàng)告(gào)乃(nǎi)翁(wēng)。(。)"
-    },
-    {
-        "name": "秋夜将晓出篱门迎凉有感",
-        "trans": [],
-        "title": "秋夜将晓出篱门迎凉有感",
-        "author": "陆游",
-        "notation": "三(sān)万(wàn)里(lǐ)河(hé)东(dōng)入(rù)海(hǎi)，(，)五(wǔ)千(qiān)仞(rèn)岳(yuè)上(shàng)摩(mó)天(tiān)。(。)遗(yí)民(mín)泪(lèi)尽(jìn)胡(hú)尘(chén)里(lǐ)，(，)南(nán)望(wàng)王(wáng)师(shī)又(yòu)一(yī)年(nián)。(。)"
-    },
-    {
-        "name": "四时田园杂兴",
-        "trans": [],
-        "title": "四时田园杂兴",
-        "author": "范成大",
-        "notation": "昼(zhòu)出(chū)耘(yún)田(tián)夜(yè)绩(jì)麻(má)，(，)村(cūn)庄(zhuāng)儿(ér)女(nǚ)各(gè)当(dāng)家(jiā)。(。)童(tóng)孙(sūn)未(wèi)解(jiě)供(gōng)耕(gēng)织(zhī)，(，)也(yě)傍(bàng)桑(sāng)阴(yīn)学(xué)种(zhòng)瓜(guā)。(。)"
-    },
-    {
-        "name": "四时田园杂兴·梅子金黄杏子肥",
-        "trans": [],
-        "title": "四时田园杂兴·梅子金黄杏子肥",
-        "author": "范成大",
-        "notation": "梅(méi)子(zǐ)金(jīn)黄(huáng)杏(xìng)子(zǐ)肥(féi)，(，)麦(mài)花(huā)雪(xuě)白(bái)菜(cài)花(huā)稀(xī)。(。)日(rì)长(cháng)篱(lí)落(luò)无(wú)人(rén)过(guò)，(，)唯(wéi)有(yǒu)蜻(qīng)蜓(tíng)蛱(jiá)蝶(dié)飞(fēi)。(。)"
+        "name": "姓氏歌",
+        "trans": [],
+        "title": "姓氏歌",
+        "author": "佚名",
+        "notation": "你(nǐ)姓(xìng)什(shén)么(me)？(？)我(wǒ)姓(xìng)李(lǐ)。(。)什(shén)么(me)李(lǐ)？(？)木(mù)子(zǐ)李(lǐ)。(。)他(tā)姓(xìng)什(shén)么(me)？(？)他(tā)姓(xìng)张(zhāng)。(。)什(shén)么(me)张(zhāng)？(？)弓(gōng)长(cháng)张(zhāng)。(。)古(gǔ)月(yuè)胡(hú)，(，)口(kǒu)天(tiān)吴(wú)，(，)双(shuāng)人(rén)徐(xú)，(，)言(yán)午(wǔ)许(xǔ)。(。)中(zhōng)国(guó)姓(xìng)氏(shì)有(yǒu)很(hěn)多(duō)，(，)赵(zhào)、(、)钱(qián)、(、)孙(sūn)、(、)李(lǐ)，(，)周(zhōu)、(、)吴(wú)、(、)郑(zhèng)、(、)王(wáng)，(，)诸(zhū)葛(gě)、(、)东(dōng)方(fāng)，(，)上(shàng)官(guān)、(、)欧(ōu)阳(yáng)……(……)"
     },
     {
         "name": "小池",
@@ -560,101 +14,171 @@
         "notation": "泉(quán)眼(yǎn)无(wú)声(shēng)惜(xī)细(xì)流(liú)，(，)树(shù)阴(yīn)照(zhào)水(shuǐ)爱(ài)晴(qíng)柔(róu)。(。)小(xiǎo)荷(hé)才(cái)露(lù)尖(jiān)尖(jiān)角(jiǎo)，(，)早(zǎo)有(yǒu)蜻(qīng)蜓(tíng)立(lì)上(shàng)头(tóu)。(。)"
     },
     {
-        "name": "晓出净慈寺送林子方",
+        "name": "春夏秋冬",
         "trans": [],
-        "title": "晓出净慈寺送林子方",
-        "author": "杨万里",
-        "notation": "毕(bì)竟(jìng)西(xī)湖(hú)六(liù)月(yuè)中(zhōng)，(，)风(fēng)光(guāng)不(bù)与(yǔ)四(sì)时(shí)同(tóng)。(。)接(jiē)天(tiān)莲(lián)叶(yè)无(wú)穷(qióng)碧(bì)，(，)映(yìng)日(rì)荷(hé)花(huā)别(bié)样(yàng)红(hóng)。(。)"
+        "title": "春夏秋冬",
+        "author": "佚名",
+        "notation": "春(chūn)风(fēng)夏(xià)雨(yǔ)秋(qiū)霜(shuāng)冬(dōng)雪(xuě)春(chūn)风(fēng)吹(chuī)夏(xià)雨(yǔ)落(luò)秋(qiū)霜(shuāng)降(jiàng)冬(dōng)雪(xuě)飘(piāo)青(qīng)草(cǎo)红(hóng)花(huā)游(yóu)鱼(yú)飞(fēi)鸟(niǎo)池(chí)草(cǎo)青(qīng)山(shān)花(huā)红(hóng)鱼(yú)出(chū)水(shuǐ)鸟(niǎo)入(rù)林(lín)霜(shuāng)吹(chuī)落(luò)降(jiàng)飘(piāo)游(yóu)池(chí)入(rù)"
     },
     {
-        "name": "春日",
+        "name": "小青蛙",
         "trans": [],
-        "title": "春日",
-        "author": "朱熹",
-        "notation": "胜(shèng)日(rì)寻(xún)芳(fāng)泗(sì)水(shuǐ)滨(bīn)，(，)无(wú)边(biān)光(guāng)景(jǐng)一(yī)时(shí)新(xīn)。(。)等(děng)闲(xián)识(shí)得(dé)东(dōng)风(fēng)面(miàn)，(，)万(wàn)紫(zǐ)千(qiān)红(hóng)总(zǒng)是(shì)春(chūn)。(。)"
+        "title": "小青蛙",
+        "author": "佚名",
+        "notation": "河(hé)水(shuǐ)清(qīng)清(qīng)天(tiān)气(qì)晴(qíng)，(，)小(xiǎo)小(xiǎo)青(qīng)蛙(wā)大(dà)眼(yǎn)睛(jīng)。(。)保(bǎo)护(hù)禾(hé)苗(miáo)吃(chī)害(hài)虫(chóng)，(，)做(zuò)了(le)不(bù)少(shǎo)好(hǎo)事(shì)情(qíng)。(。)请(qǐng)你(nǐ)爱(ài)护(hù)小(xiǎo)青(qīng)蛙(wā)，(，)好(hǎo)让(ràng)禾(hé)苗(miáo)不(bù)生(shēng)病(bìng)。(。)"
     },
     {
-        "name": "观书有感",
+        "name": "猜字谜",
         "trans": [],
-        "title": "观书有感",
-        "author": "朱熹",
-        "notation": "半(bàn)亩(mǔ)方(fāng)塘(táng)一(yī)鉴(jiàn)开(kāi)，(，)天(tiān)光(guāng)云(yún)影(yǐng)共(gòng)徘(pái)徊(huái)。(。)问(wèn)渠(qú)哪(nǎ)得(dé)清(qīng)如(rú)许(xǔ)，(，)为(wèi)有(yǒu)源(yuán)头(tóu)活(huó)水(shuǐ)来(lái)。(。)"
+        "title": "猜字谜",
+        "author": "佚名",
+        "notation": "左(zuǒ)边(biān)绿(lǜ)，(，)右(yòu)边(biān)红(hóng)，(，)左(zuǒ)右(yòu)相(xiāng)遇(yù)起(qǐ)凉(liáng)风(fēng)。(。)绿(lǜ)的(de)喜(xǐ)欢(huān)及(jí)时(shí)雨(yǔ)，(，)红(hóng)的(de)最(zuì)怕(pà)水(shuǐ)来(lái)攻(gōng)。(。)“(“)言(yán)”(”)来(lái)互(hù)相(xiāng)尊(zūn)重(zhòng)，(，)“(“)心(xīn)”(”)至(zhì)令(lìng)人(rén)感(gǎn)动(dòng)，(，)“(“)日(rì)”(”)出(chū)万(wàn)里(lǐ)无(wú)云(yún)，(，)“(“)水(shuǐ)”(”)到(dào)纯(chún)净(jìng)透(tòu)明(míng)。(。)"
     },
     {
-        "name": "题临安邸",
+        "name": "吃水不忘挖井人",
         "trans": [],
-        "title": "题临安邸",
-        "author": "林升",
-        "notation": "山(shān)外(wài)青(qīng)山(shān)楼(lóu)外(wài)楼(lóu)，(，)西(xī)湖(hú)歌(gē)舞(wǔ)几(jǐ)时(shí)休(xiū)？(？)暖(nuǎn)风(fēng)熏(xūn)得(dé)游(yóu)人(rén)醉(zuì)，(，)直(zhí)把(bǎ)杭(háng)州(zhōu)作(zuò)汴(biàn)州(zhōu)。(。)"
+        "title": "吃水不忘挖井人",
+        "author": "佚名",
+        "notation": "瑞(ruì)金(jīn)城(chéng)外(wài)有(yǒu)个(gè)村(cūn)子(zi)叫(jiào)沙(shā)洲(zhōu)坝(bà)，(，)毛(máo)主(zhǔ)席(xí)在(zài)江(jiāng)西(xī)领(lǐng)导(dǎo)革(gé)命(mìng)的(de)时(shí)候(hòu)，(，)在(zài)那(nà)儿(ér)住(zhù)过(guò)。(。)村(cūn)子(zi)里(lǐ)没(méi)有(yǒu)水(shuǐ)井(jǐng)，(，)乡(xiāng)亲(qīn)们(men)吃(chī)水(shuǐ)要(yào)到(dào)很(hěn)远(yuǎn)的(de)地(dì)方(fāng)去(qù)挑(tiāo)。(。)毛(máo)主(zhǔ)席(xí)就(jiù)带(dài)领(lǐng)战(zhàn)士(shì)和(hé)乡(xiāng)亲(qīn)们(men)挖(wā)了(le)一(yī)口(kǒu)井(jǐng)。(。)解(jiě)放(fàng)以(yǐ)后(hòu)，(，)乡(xiāng)亲(qīn)们(men)在(zài)井(jǐng)旁(páng)边(biān)立(lì)了(le)一(yī)块(kuài)石(shí)碑(bēi)，(，)上(shàng)面(miàn)刻(kè)着(zhe)：(：)“(“)吃(chī)水(shuǐ)不(bù)忘(wàng)挖(wā)井(jǐng)人(rén)，(，)时(shí)刻(kè)想(xiǎng)念(niàn)毛(máo)主(zhǔ)席(xí)。(。)”(”)"
     },
     {
-        "name": "游园不值",
+        "name": "我多想去看看",
         "trans": [],
-        "title": "游园不值",
-        "author": "叶绍翁",
-        "notation": "应(yīng)怜(lián)屐(jī)齿(chǐ)印(yìn)苍(cāng)苔(tái)，(，)小(xiǎo)扣(kòu)柴(chái)扉(fēi)久(jiǔ)不(bù)开(kāi)。(。)春(chūn)色(sè)满(mǎn)园(yuán)关(guān)不(bù)住(zhù)，(，)一(yī)枝(zhī)红(hóng)杏(xìng)出(chū)墙(qiáng)来(lái)。(。)"
+        "title": "我多想去看看",
+        "author": "佚名",
+        "notation": "妈(mā)妈(mā)告(gào)诉(sù)我(wǒ)，(，)沿(yán)着(zhe)弯(wān)弯(wān)的(de)小(xiǎo)路(lù)，(，)就(jiù)会(huì)走(zǒu)出(chū)天(tiān)山(shān)。(。)遥(yáo)远(yuǎn)的(de)北(běi)京(jīng)，(，)有(yǒu)一(yī)座(zuò)雄(xióng)伟(wěi)的(de)天(tiān)安(ān)门(mén)，(，)广(guǎng)场(chǎng)上(shàng)的(de)升(shēng)旗(qí)仪(yí)式(shì)非(fēi)常(cháng)壮(zhuàng)观(guān)。(。)我(wǒ)对(duì)妈(mā)妈(mā)说(shuō)，(，)我(wǒ)多(duō)想(xiǎng)去(qù)看(kàn)看(kàn)，(，)我(wǒ)多(duō)想(xiǎng)去(qù)看(kàn)看(kàn)！(！)爸(bà)爸(bà)告(gào)诉(sù)我(wǒ)，(，)沿(yán)着(zhe)宽(kuān)宽(kuān)的(de)公(gōng)路(lù)，(，)就(jiù)会(huì)走(zǒu)出(chū)北(běi)京(jīng)。(。)遥(yáo)远(yuǎn)的(de)新(xīn)疆(jiāng)，(，)有(yǒu)美(měi)丽(lì)的(de)天(tiān)山(shān)，(，)雪(xuě)山(shān)上(shàng)盛(shèng)开(kāi)着(zhe)洁(jié)白(bái)的(de)雪(xuě)莲(lián)。(。)我(wǒ)对(duì)爸(bà)爸(bà)说(shuō)，(，)我(wǒ)多(duō)想(xiǎng)去(qù)看(kàn)看(kàn)，(，)我(wǒ)多(duō)想(xiǎng)去(qù)看(kàn)看(kàn)！(！)"
     },
     {
-        "name": "乡村四月",
+        "name": "小公鸡和小鸭子",
         "trans": [],
-        "title": "乡村四月",
-        "author": "翁卷",
-        "notation": "绿(lǜ)遍(biàn)山(shān)原(yuán)白(bái)满(mǎn)川(chuān)，(，)子(zǐ)规(guī)声(shēng)里(lǐ)雨(yǔ)如(rú)烟(yān)。(。)乡(xiāng)村(cūn)四(sì)月(yuè)闲(xián)人(rén)少(shǎo)，(，)才(cái)了(liǎo)蚕(cán)桑(sāng)又(yòu)插(chā)田(tián)。(。)"
+        "title": "小公鸡和小鸭子",
+        "author": "佚名",
+        "notation": "小(xiǎo)公(gōng)鸡(jī)和(hé)小(xiǎo)鸭(yā)子(zi)一(yī)块(kuài)儿(ér)出(chū)去(qù)玩(wán)。(。)他(tā)们(men)走(zǒu)进(jìn)草(cǎo)地(dì)里(lǐ)。(。)小(xiǎo)公(gōng)鸡(jī)找(zhǎo)到(dào)了(le)许(xǔ)多(duō)虫(chóng)子(zi)，(，)吃(chī)得(dé)很(hěn)欢(huān)。(。)小(xiǎo)鸭(yā)子(zi)捉(zhuō)不(bù)到(dào)虫(chóng)子(zi)，(，)急(jí)得(dé)直(zhí)哭(kū)。(。)小(xiǎo)公(gōng)鸡(jī)看(kàn)见(jiàn)了(le)，(，)捉(zhuō)到(dào)虫(chóng)子(zi)就(jiù)给(gěi)小(xiǎo)鸭(yā)子(zi)吃(chī)。(。)他(tā)们(men)走(zǒu)到(dào)小(xiǎo)河(hé)边(biān)。(。)小(xiǎo)鸭(yā)子(zi)说(shuō)：(：)“(“)公(gōng)鸡(jī)弟(dì)弟(dì)，(，)我(wǒ)到(dào)河(hé)里(lǐ)捉(zhuō)鱼(yú)给(gěi)你(nǐ)吃(chī)。(。)”(”)小(xiǎo)公(gōng)鸡(jī)说(shuō)：(：)“(“)我(wǒ)也(yě)去(qù)。(。)”(”)小(xiǎo)鸭(yā)子(zi)说(shuō)：(：)“(“)不(bù)行(xíng)，(，)不(bù)行(xíng)，(，)你(nǐ)不(bù)会(huì)游(yóu)泳(yǒng)，(，)会(huì)淹(yān)死(sǐ)的(de)！(！)”(”)小(xiǎo)公(gōng)鸡(jī)不(bù)信(xìn)，(，)偷(tōu)偷(tōu)地(dì)跟(gēn)在(zài)小(xiǎo)鸭(yā)子(zi)后(hòu)面(miàn)，(，)也(yě)下(xià)了(le)水(shuǐ)。(。)小(xiǎo)鸭(yā)子(zi)正(zhèng)在(zài)水(shuǐ)里(lǐ)捉(zhuō)鱼(yú)，(，)忽(hū)然(rán)听(tīng)见(jiàn)小(xiǎo)公(gōng)鸡(jī)喊(hǎn)救(jiù)命(mìng)。(。)他(tā)飞(fēi)快(kuài)地(dì)游(yóu)到(dào)小(xiǎo)公(gōng)鸡(jī)身(shēn)边(biān)，(，)让(ràng)小(xiǎo)公(gōng)鸡(jī)坐(zuò)在(zài)自(zì)己(jǐ)的(de)背(bèi)上(shàng)。(。)小(xiǎo)公(gōng)鸡(jī)上(shàng)了(le)岸(àn)，(，)笑(xiào)着(zhe)对(duì)小(xiǎo)鸭(yā)子(zi)说(shuō)：(：)“(“)鸭(yā)子(zi)哥(gē)哥(gē)，(，)谢(xiè)谢(xiè)你(nǐ)。(。)”(”)"
     },
     {
-        "name": "菩萨蛮·书江西造口壁",
+        "name": "树和喜鹊",
         "trans": [],
-        "title": "菩萨蛮·书江西造口壁",
-        "author": "辛弃疾",
-        "notation": "郁(yù)孤(gū)台(tái)下(xià)清(qīng)江(jiāng)水(shuǐ)，(，)中(zhōng)间(jiān)多(duō)少(shǎo)行(xíng)人(rén)泪(lèi)。(。)西(xī)北(běi)望(wàng)长(cháng)安(ān)，(，)可(kě)怜(lián)无(wú)数(shù)山(shān)。(。)青(qīng)山(shān)遮(zhē)不(bù)住(zhù)，(，)毕(bì)竟(jìng)东(dōng)流(liú)去(qù)。(。)江(jiāng)晚(wǎn)正(zhèng)愁(chóu)予(yú)，(，)山(shān)深(shēn)闻(wén)鹧(zhè)鸪(gū)。(。)"
+        "title": "树和喜鹊",
+        "author": "佚名",
+        "notation": "从(cóng)前(qián)，(，)这(zhè)里(lǐ)只(zhǐ)有(yǒu)一(yī)棵(kē)树(shù)，(，)树(shù)上(shàng)只(zhǐ)有(yǒu)一(yī)个(gè)鸟(niǎo)窝(wō)，(，)鸟(niǎo)窝(wō)里(lǐ)只(zhǐ)有(yǒu)一(yī)只(zhǐ)喜(xǐ)鹊(què)。(。)树(shù)很(hěn)孤(gū)单(dān)，(，)喜(xǐ)鹊(què)也(yě)很(hěn)孤(gū)单(dān)。(。)后(hòu)来(lái)，(，)这(zhè)里(lǐ)种(zhǒng)了(le)好(hǎo)多(duō)好(hǎo)多(duō)树(shù)，(，)每(měi)棵(kē)树(shù)上(shàng)都(dōu)有(yǒu)鸟(niǎo)窝(wō)，(，)每(měi)个(gè)鸟(niǎo)窝(wō)里(lǐ)都(dōu)有(yǒu)喜(xǐ)鹊(què)。(。)树(shù)有(yǒu)了(le)邻(lín)居(jū)，(，)喜(xǐ)鹊(què)也(yě)有(yǒu)了(le)邻(lín)居(jū)。(。)每(měi)天(tiān)天(tiān)一(yī)亮(liàng)，(，)喜(xǐ)鹊(què)们(men)叽(jī)叽(jī)喳(zhā)喳(zhā)叫(jiào)几(jǐ)声(shēng)，(，)打(dǎ)着(zhe)招(zhāo)呼(hū)一(yī)起(qǐ)飞(fēi)出(chū)去(qù)了(le)。(。)天(tiān)一(yī)黑(hēi)，(，)他(tā)们(men)又(yòu)叽(jī)叽(jī)喳(zhā)喳(zhā)地(dì)一(yī)起(qǐ)飞(fēi)回(huí)窝(wō)里(lǐ)，(，)安(ān)安(ān)静(jìng)静(jìng)地(dì)睡(shuì)觉(jué)了(le)。(。)树(shù)很(hěn)快(kuài)乐(lè)，(，)喜(xǐ)鹊(què)也(yě)很(hěn)快(kuài)乐(lè)。(。)"
     },
     {
-        "name": "墨梅",
+        "name": "怎么都快乐",
         "trans": [],
-        "title": "墨梅",
-        "author": "王冕",
-        "notation": "我(wǒ)家(jiā)洗(xǐ)砚(yàn)池(chí)头(tóu)树(shù)，(，)朵(duǒ)朵(duǒ)花(huā)开(kāi)淡(dàn)墨(mò)痕(hén)。(。)不(bù)要(yào)人(rén)夸(kuā)好(hǎo)颜(yán)色(sè)，(，)只(zhǐ)留(liú)清(qīng)气(qì)满(mǎn)乾(qián)坤(kūn)。(。)"
+        "title": "怎么都快乐",
+        "author": "佚名",
+        "notation": "一(yī)个(gè)人(rén)玩(wán)，(，)很(hěn)好(hǎo)！(！)独(dú)自(zì)一(yī)人(rén)，(，)静(jìng)悄(qiāo)悄(qiāo)的(de)，(，)正(zhèng)好(hǎo)用(yòng)纸(zhǐ)折(zhé)船(chuán)，(，)折(zhé)马(mǎ)…(…)…(…)踢(tī)毽(jiàn)子(zi)，(，)跳(tiào)绳(shéng)，(，)搭(dā)积(jī)木(mù)，(，)当(dāng)然(rán)还(hái)有(yǒu)看(kàn)书(shū)，(，)画(huà)画(huà)，(，)听(tīng)音(yīn)乐(lè)…(…)…(…)两(liǎng)个(gè)人(rén)玩(wán)，(，)很(hěn)好(hǎo)！(！)讲(jiǎng)故(gù)事(shì)得(dé)有(yǒu)人(rén)听(tīng)才(cái)行(xíng)，(，)你(nǐ)讲(jiǎng)我(wǒ)听(tīng)，(，)我(wǒ)讲(jiǎng)你(nǐ)听(tīng)。(。)还(hái)有(yǒu)下(xià)象(xiàng)棋(qí)，(，)打(dǎ)羽(yǔ)毛(máo)球(qiú)，(，)坐(zuò)跷(qiāo)跷(qiāo)板(bǎn)…(…)…(…)三(sān)个(gè)人(rén)玩(wán)，(，)很(hěn)好(hǎo)！(！)讲(jiǎng)故(gù)事(shì)多(duō)个(gè)人(rén)听(tīng)更(gèng)有(yǒu)劲(jìn)，(，)你(nǐ)讲(jiǎng)我(wǒ)们(men)听(tīng)，(，)我(wǒ)讲(jiǎng)你(nǐ)们(men)听(tīng)。(。)两(liǎng)个(gè)人(rén)甩(shuǎi)绳(shéng)子(zi)，(，)你(nǐ)跳(tiào)，(，)我(wǒ)跳(tiào)，(，)轮(lún)流(liú)跳(tiào)。(。)四(sì)个(gè)人(rén)玩(wán)，(，)很(hěn)好(hǎo)！(！)五(wǔ)个(gè)人(rén)玩(wán)，(，)很(hěn)好(hǎo)！(！)许(xǔ)多(duō)人(rén)玩(wán)，(，)更(gèng)好(hǎo)！(！)人(rén)多(duō)，(，)什(shén)么(me)游(yóu)戏(xì)都(dōu)能(néng)玩(wán)，(，)拔(bá)河(hé)，(，)老(lǎo)鹰(yīng)捉(zhuō)小(xiǎo)鸡(jī)，(，)打(dǎ)排(pái)球(qiú)，(，)打(dǎ)篮(lán)球(qiú)，(，)踢(tī)足(zú)球(qiú)…(…)…(…)连(lián)开(kāi)运(yùn)动(dòng)会(huì)也(yě)可(kě)以(yǐ)。(。)"
     },
     {
-        "name": "石灰吟",
+        "name": "静夜思",
         "trans": [],
-        "title": "石灰吟",
-        "author": "于谦",
-        "notation": "千(qiān)锤(chuí)万(wàn)凿(záo)出(chū)深(shēn)山(shān)，(，)烈(liè)火(huǒ)焚(fén)烧(shāo)若(ruò)等(děng)闲(xián)。(。)粉(fěn)骨(gǔ)碎(suì)身(shēn)浑(hún)不(bù)怕(pà)，(，)只(zhǐ)留(liú)清(qīng)白(bái)在(zài)人(rén)间(jiān)。(。)"
+        "title": "静夜思",
+        "author": "李白",
+        "notation": "床(chuáng)前(qián)明(míng)月(yuè)光(guāng)，(，)疑(yí)是(shì)地(dì)上(shàng)霜(shuāng)。(。)举(jǔ)头(tóu)望(wàng)明(míng)月(yuè)，(，)低(dī)头(tóu)思(sī)故(gù)乡(xiāng)。(。)"
     },
     {
-        "name": "朝天子·咏喇叭",
+        "name": "夜色",
         "trans": [],
-        "title": "朝天子·咏喇叭",
-        "author": "王磐",
-        "notation": "喇(lǎ)叭(ba)，(，)唢(suǒ)呐(nà)，(，)曲(qǔ)儿(ér)小(xiǎo)，(，)腔(qiāng)儿(ér)大(dà)。(。)官(guān)船(chuán)往(wǎng)来(lái)乱(luàn)如(rú)麻(má)，(，)全(quán)仗(zhàng)你(nǐ)抬(tái)身(shēn)价(jià)。(。)军(jūn)听(tīng)了(le)军(jūn)愁(chóu)，(，)民(mín)听(tīng)了(le)民(mín)怕(pà)，(，)哪(nǎ)里(lǐ)去(qù)辨(biàn)什(shén)么(me)真(zhēn)共(gòng)假(jiǎ)？(？)眼(yǎn)见(jiàn)的(de)吹(chuī)翻(fān)了(le)这(zhè)家(jiā)，(，)吹(chuī)伤(shāng)了(le)那(nà)家(jiā)，(，)只(zhǐ)吹(chuī)的(de)水(shuǐ)尽(jìn)鹅(é)飞(fēi)罢(bà)！(！)"
+        "title": "夜色",
+        "author": "佚名",
+        "notation": "我(wǒ)从(cóng)前(qián)胆(dǎn)子(zi)很(hěn)小(xiǎo)很(hěn)小(xiǎo)，(，)天(tiān)一(yī)黑(hēi)就(jiù)不(bù)敢(gǎn)往(wǎng)外(wài)瞧(qiáo)。(。)妈(mā)妈(mā)把(bǎ)勇(yǒng)敢(gǎn)的(de)故(gù)事(shì)讲(jiǎng)了(le)又(yòu)讲(jiǎng)，(，)可(kě)我(wǒ)一(yī)看(kàn)窗(chuāng)外(wài)心(xīn)就(jiù)乱(luàn)跳(tiào)…(…)…(…)爸(bà)爸(bà)晚(wǎn)上(shàng)偏(piān)要(yào)拉(lā)我(wǒ)去(qù)散(sàn)步(bù)，(，)原(yuán)来(lái)花(huā)草(cǎo)都(dōu)像(xiàng)白(bái)天(tiān)一(yī)样(yàng)微(wēi)笑(xiào)。(。)从(cóng)此(cǐ)再(zài)黑(hēi)再(zài)黑(hēi)的(de)夜(yè)晚(wǎn)，(，)我(wǒ)也(yě)能(néng)看(kàn)见(jiàn)小(xiǎo)鸟(niǎo)怎(zěn)样(yàng)在(zài)月(yuè)光(guāng)下(xià)睡(shuì)觉(jué)…(…)…(…)"
     },
     {
-        "name": "竹石",
+        "name": "端午粽",
         "trans": [],
-        "title": "竹石",
-        "author": "郑燮",
-        "notation": "咬(yǎo)定(dìng)青(qīng)山(shān)不(bù)放(fàng)松(sōng)，(，)立(lì)根(gēn)原(yuán)在(zài)破(pò)岩(yán)中(zhōng)。(。)千(qiān)磨(mó)万(wàn)击(jī)还(hái)坚(jiān)劲(jìn)，(，)任(rèn)尔(ěr)东(dōng)西(xī)南(nán)北(běi)风(fēng)。(。)"
+        "title": "端午粽",
+        "author": "佚名",
+        "notation": "一(yī)到(dào)端(duān)午(wǔ)节(jié)，(，)外(wài)婆(pó)总(zǒng)会(huì)煮(zhǔ)好(hǎo)一(yī)锅(guō)粽(zòng)子(zi)，(，)盼(pàn)着(zhe)我(wǒ)们(men)回(huí)去(qù)。(。)粽(zòng)子(zi)是(shì)用(yòng)青(qīng)青(qīng)的(de)箬(ruò)竹(zhú)叶(yè)包(bāo)的(de)，(，)里(lǐ)面(miàn)裹(guǒ)着(zhe)白(bái)白(bái)的(de)糯(nuò)米(mǐ)，(，)中(zhōng)间(jiān)有(yǒu)一(yī)颗(kē)红(hóng)红(hóng)的(de)枣(zǎo)。(。)外(wài)婆(pó)一(yī)掀(xiān)开(kāi)锅(guō)盖(gài)，(，)煮(zhǔ)熟(shú)的(de)粽(zòng)子(zi)就(jiù)飘(piāo)出(chū)一(yī)股(gǔ)清(qīng)香(xiāng)来(lái)。(。)剥(bō)开(kāi)粽(zòng)叶(yè)，(，)咬(yǎo)一(yī)口(kǒu)粽(zòng)子(zi)，(，)真(zhēn)是(shì)又(yòu)黏(nián)又(yòu)甜(tián)。(。)外(wài)婆(pó)包(bāo)的(de)粽(zòng)子(zi)十(shí)分(fēn)好(hǎo)吃(chī)，(，)花(huā)样(yàng)也(yě)多(duō)。(。)除(chú)了(le)红(hóng)枣(zǎo)粽(zòng)，(，)还(hái)有(yǒu)红(hóng)豆(dòu)粽(zòng)和(hé)鲜(xiān)肉(ròu)粽(zòng)。(。)我(wǒ)们(men)在(zài)外(wài)婆(pó)家(jiā)美(měi)滋(zī)滋(zī)地(dì)吃(chī)了(le)之(zhī)后(hòu)，(，)外(wài)婆(pó)还(hái)会(huì)装(zhuāng)一(yī)小(xiǎo)篮(lán)粽(zòng)子(zi)要(yào)我(wǒ)们(men)带(dài)回(huí)去(qù)，(，)分(fēn)给(gěi)邻(lín)居(jū)吃(chī)。(。)长(zhǎng)大(dà)后(hòu)我(wǒ)了(le)解(jiě)到(dào)，(，)人(rén)们(men)端(duān)午(wǔ)节(jié)吃(chī)粽(zòng)子(zi)，(，)传(chuán)说(shuō)是(shì)为(wèi)了(le)纪(jì)念(niàn)爱(ài)国(guó)诗(shī)人(rén)屈(qū)原(yuán)。(。)"
     },
     {
-        "name": "所见",
+        "name": "动物儿歌",
         "trans": [],
-        "title": "所见",
-        "author": "袁枚",
-        "notation": "牧(mù)童(tóng)骑(qí)黄(huáng)牛(niú)，(，)歌(gē)声(shēng)振(zhèn)林(lín)樾(yuè)。(。)意(yì)欲(yù)捕(bǔ)鸣(míng)蝉(chán)，(，)忽(hū)然(rán)闭(bì)口(kǒu)立(lì)。(。)"
+        "title": "动物儿歌",
+        "author": "佚名",
+        "notation": "蜻(qīng)蜓(tíng)半(bàn)空(kōng)展(zhǎn)翅(chì)飞(fēi)，(，)蝴(hú)蝶(dié)花(huā)间(jiān)捉(zhuō)迷(mí)藏(cáng)。(。)蚯(qiū)蚓(yǐn)土(tǔ)里(lǐ)造(zào)宫(gōng)殿(diàn)，(，)蚂(mǎ)蚁(yǐ)地(dì)上(shàng)运(yùn)食(shí)粮(liáng)。(。)蝌(kē)蚪(dǒu)池(chí)中(zhōng)游(yóu)得(dé)欢(huān)，(，)蜘(zhī)蛛(zhū)房(fáng)前(qián)结(jié)网(wǎng)忙(máng)。(。)"
     },
     {
-        "name": "村居",
+        "name": "古对今",
         "trans": [],
-        "title": "村居",
-        "author": "高鼎",
-        "notation": "草(cǎo)长(zhǎng)莺(yīng)飞(fēi)二(èr)月(yuè)天(tiān)，(，)拂(fú)堤(dī)杨(yáng)柳(liǔ)醉(zuì)春(chūn)烟(yān)。(。)儿(ér)童(tóng)散(sàn)学(xué)归(guī)来(lái)早(zǎo)，(，)忙(máng)趁(chèn)东(dōng)风(fēng)放(fàng)纸(zhǐ)鸢(yuān)。(。)"
+        "title": "古对今",
+        "author": "佚名",
+        "notation": "古(gǔ)对(duì)今(jīn)，(，)圆(yuán)对(duì)方(fāng)。(。)严(yán)寒(hán)对(duì)酷(kù)暑(shǔ)，(，)春(chūn)暖(nuǎn)对(duì)秋(qiū)凉(liáng)。(。)晨(chén)对(duì)暮(mù)，(，)雪(xuě)对(duì)霜(shuāng)。(。)和(hé)风(fēng)对(duì)细(xì)雨(yǔ)，(，)朝(cháo)霞(xiá)对(duì)夕(xī)阳(yáng)。(。)桃(táo)对(duì)李(lǐ)，(，)柳(liǔ)对(duì)杨(yáng)。(。)莺(yīng)歌(gē)对(duì)燕(yàn)舞(wǔ)，(，)鸟(niǎo)语(yǔ)对(duì)花(huā)香(xiāng)。(。)"
     },
     {
-        "name": "己亥杂诗",
+        "name": "操场上",
         "trans": [],
-        "title": "己亥杂诗",
-        "author": "龚自珍",
-        "notation": "九(jiǔ)州(zhōu)生(shēng)气(qì)恃(shì)风(fēng)雷(léi)，(，)万(wàn)马(mǎ)齐(qí)喑(yīn)究(jiū)可(kě)哀(āi)。(。)我(wǒ)劝(quàn)天(tiān)公(gōng)重(chóng)抖(dǒu)擞(sǒu)，(，)不(bù)拘(jū)一(yī)格(gé)降(jiàng)人(rén)才(cái)。(。)"
+        "title": "操场上",
+        "author": "佚名",
+        "notation": "打(dǎ)球(qiú)拔(bá)河(hé)拍(pāi)皮(pí)球(qiú)跳(tiào)高(gāo)跑(pǎo)步(bù)踢(tī)足(zú)球(qiú)铃(líng)声(shēng)响(xiǎng)，(，)下(xià)课(kè)了(le)。(。)操(cāo)场(chǎng)上(shàng)，(，)真(zhēn)热(rè)闹(nào)。(。)跳(tiào)绳(shéng)踢(tī)毽(jiàn)丢(diū)沙(shā)包(bāo)，(，)天(tiān)天(tiān)锻(duàn)炼(liàn)身(shēn)体(tǐ)好(hǎo)。(。)"
+    },
+    {
+        "name": "人之初",
+        "trans": [],
+        "title": "人之初",
+        "author": "佚名",
+        "notation": "人(rén)之(zhī)初(chū)，(，)性(xìng)本(běn)善(shàn)，(，)性(xìng)相(xiāng)近(jìn)，(，)习(xí)相(xiāng)远(yuǎn)。(。)苟(gǒu)不(bù)教(jiào)，(，)性(xìng)乃(nǎi)迁(qiān)，(，)教(jiào)之(zhī)道(dào)，(，)贵(guì)以(yǐ)专(zhuān)。(。)子(zi)不(bù)学(xué)，(，)非(fēi)所(suǒ)宜(yí)，(，)幼(yòu)不(bù)学(xué)，(，)老(lǎo)何(hé)为(wèi)？(？)玉(yù)不(bù)琢(zuó)，(，)不(bù)成(chéng)器(qì)，(，)人(rén)不(bù)学(xué)，(，)不(bù)知(zhī)义(yì)。(。)"
+    },
+    {
+        "name": "池上",
+        "trans": [],
+        "title": "池上",
+        "author": "白居易",
+        "notation": "小(xiǎo)娃(wá)撑(chēng)小(xiǎo)艇(tǐng)，(，)偷(tōu)采(cǎi)白(bái)莲(lián)回(huí)。(。)不(bù)解(jiě)藏(cáng)踪(zōng)迹(jì)，(，)浮(fú)萍(píng)一(yī)道(dào)开(kāi)。(。)"
+    },
+    {
+        "name": "浪花",
+        "trans": [],
+        "title": "浪花",
+        "author": "佚名",
+        "notation": "我(wǒ)在(zài)沙(shā)滩(tān)上(shàng)玩(wán)耍(shuǎ)。(。)浪(làng)花(huā)看(kàn)见(jiàn)了(le)，(，)迈(mài)着(zhe)轻(qīng)轻(qīng)的(de)步(bù)子(zi)走(zǒu)来(lái)，(，)悄(qiāo)悄(qiāo)地(dì)挠(náo)我(wǒ)的(de)小(xiǎo)脚(jiǎo)丫(yā)。(。)好(hǎo)痒(yǎng)啊(a)！(！)笑(xiào)得(dé)我(wǒ)眼(yǎn)泪(lèi)都(dōu)流(liú)出(chū)来(lái)了(le)，(，)它(tā)才(cái)哗(huā)哗(huā)哗(huā)地(dì)笑(xiào)着(zhe)跑(pǎo)回(huí)家(jiā)。(。)一(yī)会(huì)儿(ér)，(，)浪(làng)花(huā)又(yòu)唱(chàng)着(zhe)笑(xiào)着(zhe)跑(pǎo)来(lái)了(le)。(。)这(zhè)次(cì)，(，)它(tā)给(gěi)我(wǒ)捧(pěng)来(lái)雪(xuě)白(bái)的(de)贝(bèi)壳(ké)、(、)青(qīng)青(qīng)的(de)小(xiǎo)虾(xiā)。(。)我(wǒ)的(de)小(xiǎo)篮(lán)子(zi)都(dōu)装(zhuāng)不(bù)下(xià)啦(la)！(！)哗(huā)哗(huā)哗(huā)，(，)浪(làng)花(huā)跑(pǎo)去(qù)又(yòu)跑(pǎo)来(lái)，(，)就(jiù)像(xiàng)淘(táo)气(qì)的(de)小(xiǎo)娃(wá)娃(wá)。(。)"
+    },
+    {
+        "name": "荷叶圆圆",
+        "trans": [],
+        "title": "荷叶圆圆",
+        "author": "佚名",
+        "notation": "荷(hé)叶(yè)圆(yuán)圆(yuán)的(de)，(，)绿(lǜ)绿(lǜ)的(de)。(。)小(xiǎo)水(shuǐ)珠(zhū)说(shuō)：(：)“(“)荷(hé)叶(yè)是(shì)我(wǒ)的(de)摇(yáo)篮(lán)。(。)”(”)小(xiǎo)水(shuǐ)珠(zhū)躺(tǎng)在(zài)荷(hé)叶(yè)上(shàng)，(，)眨(zhǎ)着(zhe)亮(liàng)晶(jīng)晶(jīng)的(de)眼(yǎn)睛(jīng)。(。)小(xiǎo)蜻(qīng)蜓(tíng)说(shuō)：(：)“(“)荷(hé)叶(yè)是(shì)我(wǒ)的(de)停(tíng)机(jī)坪(píng)。(。)”(”)小(xiǎo)蜻(qīng)蜓(tíng)立(lì)在(zài)荷(hé)叶(yè)上(shàng)，(，)展(zhǎn)开(kāi)透(tòu)明(míng)的(de)翅(chì)膀(bǎng)。(。)小(xiǎo)青(qīng)蛙(wā)说(shuō)：(：)“(“)荷(hé)叶(yè)是(shì)我(wǒ)的(de)歌(gē)台(tái)。(。)”(”)小(xiǎo)青(qīng)蛙(wā)蹲(dūn)在(zài)荷(hé)叶(yè)上(shàng)，(，)呱(gū)呱(gū)地(dì)放(fàng)声(shēng)歌(gē)唱(chàng)。(。)小(xiǎo)鱼(yú)儿(ér)说(shuō)：(：)“(“)荷(hé)叶(yè)是(shì)我(wǒ)的(de)凉(liáng)伞(sǎn)。(。)”(”)小(xiǎo)鱼(yú)儿(ér)在(zài)荷(hé)叶(yè)下(xià)笑(xiào)嘻(xī)嘻(xī)地(dì)游(yóu)来(lái)游(yóu)去(qù)，(，)捧(pěng)起(qǐ)一(yī)朵(duǒ)朵(duǒ)很(hěn)美(měi)很(hěn)美(měi)的(de)水(shuǐ)花(huā)。(。)"
+    },
+    {
+        "name": "要下雨了",
+        "trans": [],
+        "title": "要下雨了",
+        "author": "佚名",
+        "notation": "小(xiǎo)白(bái)兔(tù)弯(wān)着(zhe)腰(yāo)在(zài)山(shān)坡(pō)上(shàng)割(gē)草(cǎo)。(。)天(tiān)阴(yīn)沉(chén)沉(chén)的(de)，(，)小(xiǎo)白(bái)兔(tù)直(zhí)起(qǐ)身(shēn)子(zi)，(，)伸(shēn)了(le)伸(shēn)腰(yāo)。(。)小(xiǎo)燕(yàn)子(zi)从(cóng)他(tā)头(tóu)上(shàng)飞(fēi)过(guò)。(。)小(xiǎo)白(bái)兔(tù)大(dà)声(shēng)喊(hǎn)：(：)“(“)燕(yàn)子(zi)，(，)燕(yàn)子(zi)，(，)你(nǐ)为(wèi)什(shén)么(me)飞(fēi)得(dé)这(zhè)么(me)低(dī)呀(ya)？(？)”(”)燕(yàn)子(zi)边(biān)飞(fēi)边(biān)说(shuō)：(：)“(“)要(yào)下(xià)雨(yǔ)了(le)，(，)空(kōng)气(qì)很(hěn)潮(cháo)湿(shī)，(，)虫(chóng)子(zi)的(de)翅(chì)膀(bǎng)沾(zhān)了(le)小(xiǎo)水(shuǐ)珠(zhū)，(，)飞(fēi)不(bù)高(gāo)。(。)我(wǒ)正(zhèng)忙(máng)着(zhe)捉(zhuō)虫(chóng)子(zi)呢(ne)！(！)”(”)是(shì)要(yào)下(xià)雨(yǔ)了(le)吗(ma)？(？)小(xiǎo)白(bái)兔(tù)往(wǎng)前(qián)边(biān)池(chí)子(zi)里(lǐ)一(yī)看(kàn)，(，)小(xiǎo)鱼(yú)都(dōu)游(yóu)到(dào)水(shuǐ)面(miàn)上(shàng)来(lái)了(le)。(。)小(xiǎo)白(bái)兔(tù)跑(pǎo)过(guò)去(qù)，(，)问(wèn)：(：)“(“)小(xiǎo)鱼(yú)，(，)小(xiǎo)鱼(yú)，(，)今(jīn)天(tiān)怎(zěn)么(me)有(yǒu)空(kōng)出(chū)来(lái)呀(ya)？(？)”(”)小(xiǎo)鱼(yú)说(shuō)：(：)“(“)要(yào)下(xià)雨(yǔ)了(le)，(，)水(shuǐ)里(lǐ)闷(mèn)得(dé)很(hěn)，(，)我(wǒ)们(men)到(dào)水(shuǐ)面(miàn)上(shàng)来(lái)透(tòu)透(tòu)气(qì)。(。)小(xiǎo)白(bái)兔(tù)，(，)你(nǐ)快(kuài)回(huí)家(jiā)吧(ba)，(，)小(xiǎo)心(xīn)淋(lín)着(zhe)雨(yǔ)。(。)”(”)小(xiǎo)白(bái)兔(tù)连(lián)忙(máng)挎(kuà)起(qǐ)篮(lán)子(zi)往(wǎng)家(jiā)跑(pǎo)。(。)他(tā)看(kàn)见(jiàn)路(lù)边(biān)有(yǒu)一(yī)大(dà)群(qún)蚂(mǎ)蚁(yǐ)，(，)就(jiù)把(bǎ)要(yào)下(xià)雨(yǔ)的(de)消(xiāo)息(xī)告(gào)诉(sù)了(le)蚂(mǎ)蚁(yǐ)。(。)一(yī)只(zhǐ)大(dà)蚂(mǎ)蚁(yǐ)说(shuō)：(：)“(“)是(shì)要(yào)下(xià)雨(yǔ)了(le)，(，)我(wǒ)们(men)正(zhèng)忙(máng)着(zhe)搬(bān)东(dōng)西(xī)呢(ne)！(！)”(”)小(xiǎo)白(bái)兔(tù)加(jiā)快(kuài)步(bù)子(zi)往(wǎng)家(jiā)跑(pǎo)。(。)他(tā)一(yī)边(biān)跑(pǎo)一(yī)边(biān)喊(hǎn)：(：)“(“)妈(mā)妈(mā)，(，)妈(mā)妈(mā)，(，)要(yào)下(xià)雨(yǔ)了(le)！(！)”(”)轰(hōng)隆(lóng)隆(lóng)，(，)天(tiān)空(kōng)响(xiǎng)起(qǐ)了(le)一(yī)阵(zhèn)雷(léi)声(shēng)。(。)哗(huā)，(，)哗(huā)，(，)哗(huā)，(，)大(dà)雨(yǔ)真(zhēn)的(de)下(xià)起(qǐ)来(lái)了(le)！(！)"
+    },
+    {
+        "name": "文具的家",
+        "trans": [],
+        "title": "文具的家",
+        "author": "佚名",
+        "notation": "铅(qiān)笔(bǐ)，(，)只(zhǐ)用(yòng)了(le)一(yī)次(cì)，(，)就(jiù)不(bù)知(zhī)丢(diū)到(dào)哪(nǎ)里(lǐ)去(qù)了(le)。(。)橡(xiàng)皮(pí)，(，)只(zhǐ)擦(cā)了(le)一(yī)回(huí)，(，)再(zài)想(xiǎng)擦(cā)，(，)就(jiù)找(zhǎo)不(bù)着(zhe)了(le)。(。)贝(bèi)贝(bèi)一(yī)回(huí)到(dào)家(jiā)，(，)就(jiù)向(xiàng)妈(mā)妈(mā)要(yào)新(xīn)的(de)铅(qiān)笔(bǐ)、(、)新(xīn)的(de)橡(xiàng)皮(pí)。(。)妈(mā)妈(mā)说(shuō)：(：)“(“)你(nǐ)怎(zěn)么(me)天(tiān)天(tiān)丢(diū)东(dōng)西(xī)呢(ne)？(？)”(”)贝(bèi)贝(bèi)眨(zhǎ)着(zhe)一(yī)双(shuāng)大(dà)眼(yǎn)睛(jīng)，(，)对(duì)妈(mā)妈(mā)说(shuō)：(：)“(“)我(wǒ)也(yě)不(bù)知(zhī)道(dào)。(。)”(”)妈(mā)妈(mā)说(shuō)：(：)“(“)贝(bèi)贝(bèi)，(，)你(nǐ)有(yǒu)一(yī)个(gè)家(jiā)，(，)每(měi)天(tiān)放(fàng)学(xué)后(hòu)，(，)你(nǐ)都(dōu)平(píng)平(píng)安(ān)安(ān)地(dì)回(huí)家(jiā)。(。)你(nǐ)要(yào)想(xiǎng)想(xiǎng)办(bàn)法(fǎ)，(，)让(ràng)你(nǐ)的(de)铅(qiān)笔(bǐ)、(、)橡(xiàng)皮(pí)和(hé)转(zhuǎn)笔(bǐ)刀(dāo)也(yě)有(yǒu)自(zì)己(jǐ)的(de)家(jiā)呀(ya)！(！)”(”)贝(bèi)贝(bèi)想(xiǎng)起(qǐ)来(lái)了(le)，(，)她(tā)书(shū)包(bāo)里(lǐ)的(de)文(wén)具(jù)盒(hé)，(，)就(jiù)是(shì)这(zhè)些(xiē)文(wén)具(jù)的(de)家(jiā)。(。)从(cóng)此(cǐ)，(，)每(měi)天(tiān)放(fàng)学(xué)的(de)时(shí)候(hòu)，(，)贝(bèi)贝(bèi)都(dōu)要(yào)仔(zǎi)细(xì)检(jiǎn)查(chá)，(，)铅(qiān)笔(bǐ)呀(ya)，(，)橡(xiàng)皮(pí)呀(ya)，(，)转(zhuǎn)笔(bǐ)刀(dāo)哇(wa)，(，)所(suǒ)有(yǒu)的(de)小(xiǎo)伙(huǒ)伴(bàn)是(shì)不(bù)是(shì)都(dōu)回(huí)家(jiā)了(le)。(。)"
+    },
+    {
+        "name": "一分钟",
+        "trans": [],
+        "title": "一分钟",
+        "author": "佚名",
+        "notation": "丁(dīng)零(líng)零(líng)，(，)闹(nào)钟(zhōng)响(xiǎng)了(le)。(。)元(yuán)元(yuán)打(dǎ)了(le)个(gè)哈(hā)欠(qiàn)，(，)翻(fān)了(le)个(gè)身(shēn)，(，)心(xīn)想(xiǎng)：(：)再(zài)睡(shuì)一(yī)分(fēn)钟(zhōng)吧(ba)，(，)就(jiù)睡(shuì)一(yī)分(fēn)钟(zhōng)，(，)不(bù)会(huì)迟(chí)到(dào)的(de)。(。)过(guò)了(le)一(yī)分(fēn)钟(zhōng)，(，)元(yuán)元(yuán)起(qǐ)来(lái)了(le)。(。)他(tā)很(hěn)快(kuài)地(dì)洗(xǐ)了(le)脸(liǎn)，(，)吃(chī)了(le)早(zǎo)饭(fàn)，(，)就(jiù)背(bèi)着(zhe)书(shū)包(bāo)上(shàng)学(xué)去(qù)了(le)。(。)到(dào)了(le)十(shí)字(zì)路(lù)口(kǒu)，(，)他(tā)看(kàn)见(jiàn)前(qián)面(miàn)是(shì)绿(lǜ)灯(dēng)，(，)刚(gāng)想(xiǎng)走(zǒu)过(guò)去(qù)，(，)红(hóng)灯(dēng)亮(liàng)了(le)。(。)他(tā)叹(tàn)了(le)口(kǒu)气(qì)，(，)说(shuō)：(：)“(“)要(yào)是(shì)早(zǎo)一(yī)分(fēn)钟(zhōng)就(jiù)好(hǎo)了(le)。(。)”(”)他(tā)等(děng)了(le)一(yī)会(huì)儿(ér)，(，)才(cái)走(zǒu)过(guò)十(shí)字(zì)路(lù)口(kǒu)。(。)他(tā)向(xiàng)停(tíng)在(zài)车(chē)站(zhàn)的(de)公(gōng)共(gòng)汽(qì)车(chē)跑(pǎo)去(qù)，(，)眼(yǎn)看(kàn)就(jiù)要(yào)到(dào)了(le)，(，)车(chē)子(zi)开(kāi)了(le)。(。)他(tā)又(yòu)叹(tàn)了(le)口(kǒu)气(qì)，(，)说(shuō)：(：)“(“)要(yào)是(shì)早(zǎo)一(yī)分(fēn)钟(zhōng)就(jiù)好(hǎo)了(le)。(。)”(”)他(tā)等(děng)啊(a)等(děng)，(，)一(yī)直(zhí)不(bù)见(jiàn)公(gōng)共(gòng)汽(qì)车(chē)的(de)影(yǐng)子(zi)，(，)元(yuán)元(yuán)决(jué)定(dìng)走(zǒu)到(dào)学(xué)校(xiào)去(qù)。(。)到(dào)了(le)学(xué)校(xiào)，(，)已(yǐ)经(jīng)上(shàng)课(kè)了(le)。(。)元(yuán)元(yuán)红(hóng)着(zhe)脸(liǎn)，(，)低(dī)着(zhe)头(tóu)，(，)坐(zuò)到(dào)了(le)自(zì)己(jǐ)的(de)座(zuò)位(wèi)上(shàng)。(。)李(lǐ)老(lǎo)师(shī)看(kàn)了(le)看(kàn)手(shǒu)表(biǎo)，(，)说(shuō)：(：)“(“)元(yuán)元(yuán)，(，)今(jīn)天(tiān)你(nǐ)迟(chí)到(dào)了(le)二(èr)十(shí)分(fēn)钟(zhōng)。(。)”(”)元(yuán)元(yuán)非(fēi)常(cháng)后(hòu)悔(huǐ)。(。)"
+    },
+    {
+        "name": "动物王国开大会",
+        "trans": [],
+        "title": "动物王国开大会",
+        "author": "佚名",
+        "notation": "动(dòng)物(wù)王(wáng)国(guó)要(yào)开(kāi)大(dà)会(huì)，(，)老(lǎo)虎(hǔ)让(ràng)狗(gǒu)熊(xióng)通(tōng)知(zhī)大(dà)家(jiā)。(。)狗(gǒu)熊(xióng)用(yòng)喇(lǎ)叭(bā)大(dà)声(shēng)喊(hǎn)：(：)“(“)大(dà)家(jiā)注(zhù)意(yì)，(，)动(dòng)物(wù)王(wáng)国(guó)要(yào)开(kāi)大(dà)会(huì)，(，)请(qǐng)你(nǐ)们(men)都(dōu)参(cān)加(jiā)！(！)”(”)一(yī)连(lián)喊(hǎn)了(le)十(shí)遍(biàn)。(。)狐(hú)狸(lí)跑(pǎo)来(lái)了(le)，(，)对(duì)狗(gǒu)熊(xióng)说(shuō)：(：)“(“)你(nǐ)喊(hǎn)一(yī)百(bǎi)遍(biàn)，(，)大(dà)会(huì)也(yě)开(kāi)不(bù)起(qǐ)来(lái)。(。)”(”)“(“)为(wèi)什(shén)么(me)？(？)”(”)狗(gǒu)熊(xióng)问(wèn)。(。)“(“)因(yīn)为(wèi)你(nǐ)没(méi)告(gào)诉(sù)大(dà)家(jiā)，(，)大(dà)会(huì)在(zài)哪(nǎ)一(yī)天(tiān)开(kāi)，(，)是(shì)今(jīn)天(tiān)，(，)还(hái)是(shì)明(míng)天(tiān)，(，)还(hái)是(shì)…(…)…(…)”(”)狗(gǒu)熊(xióng)一(yī)听(tīng)，(，)伸(shēn)了(le)伸(shēn)舌(shé)头(tóu)，(，)做(zuò)了(le)个(gè)鬼(guǐ)脸(liǎn)，(，)连(lián)忙(máng)说(shuō)：(：)“(“)对(duì)，(，)对(duì)，(，)对(duì)！(！)”(”)于(yú)是(shì)就(jiù)去(qù)问(wèn)老(lǎo)虎(hǔ)。(。)老(lǎo)虎(hǔ)说(shuō)：(：)“(“)大(dà)会(huì)就(jiù)在(zài)明(míng)天(tiān)开(kāi)，(，)你(nǐ)快(kuài)去(qù)通(tōng)知(zhī)大(dà)家(jiā)吧(ba)！(！)”(”)狗(gǒu)熊(xióng)又(yòu)用(yòng)喇(lǎ)叭(bā)大(dà)声(shēng)喊(hǎn)：(：)“(“)大(dà)家(jiā)注(zhù)意(yì)，(，)动(dòng)物(wù)王(wáng)国(guó)要(yào)在(zài)明(míng)天(tiān)开(kāi)大(dà)会(huì)，(，)请(qǐng)你(nǐ)们(men)都(dōu)参(cān)加(jiā)！(！)”(”)一(yī)连(lián)喊(hǎn)了(le)十(shí)遍(biàn)。(。)大(dà)灰(huī)狼(láng)跑(pǎo)来(lái)对(duì)狗(gǒu)熊(xióng)说(shuō)：(：)“(“)你(nǐ)喊(hǎn)一(yī)百(bǎi)遍(biàn)，(，)大(dà)会(huì)也(yě)开(kāi)不(bù)起(qǐ)来(lái)。(。)”(”)“(“)为(wèi)什(shén)么(me)？(？)”(”)狗(gǒu)熊(xióng)问(wèn)。(。)“(“)因(yīn)为(wèi)你(nǐ)没(méi)告(gào)诉(sù)大(dà)家(jiā)，(，)在(zài)明(míng)天(tiān)什(shén)么(me)时(shí)候(hòu)开(kāi)，(，)上(shàng)午(wǔ)还(hái)是(shì)下(xià)午(wǔ)，(，)几(jǐ)点(diǎn)钟(zhōng)开(kāi)。(。)”(”)狗(gǒu)熊(xióng)一(yī)听(tīng)，(，)说(shuō)：(：)“(“)有(yǒu)道(dào)理(lǐ)，(，)有(yǒu)道(dào)理(lǐ)！(！)”(”)于(yú)是(shì)又(yòu)去(qù)问(wèn)老(lǎo)虎(hǔ)。(。)老(lǎo)虎(hǔ)说(shuō)：(：)“(“)大(dà)会(huì)就(jiù)在(zài)明(míng)天(tiān)上(shàng)午(wǔ)八(bā)点(diǎn)开(kāi)，(，)你(nǐ)再(zài)去(qù)通(tōng)知(zhī)大(dà)家(jiā)吧(ba)！(！)”(”)狗(gǒu)熊(xióng)又(yòu)用(yòng)喇(lǎ)叭(bā)大(dà)声(shēng)喊(hǎn)：(：)“(“)大(dà)家(jiā)注(zhù)意(yì)，(，)动(dòng)物(wù)王(wáng)国(guó)要(yào)在(zài)明(míng)天(tiān)上(shàng)午(wǔ)八(bā)点(diǎn)开(kāi)大(dà)会(huì)，(，)请(qǐng)你(nǐ)们(men)都(dōu)参(cān)加(jiā)！(！)”(”)一(yī)连(lián)喊(hǎn)了(le)十(shí)遍(biàn)。(。)梅(méi)花(huā)鹿(lù)跑(pǎo)来(lái)问(wèn)狗(gǒu)熊(xióng)：(：)“(“)大(dà)会(huì)在(zài)哪(nǎ)儿(ér)开(kāi)呀(ya)？(？)你(nǐ)得(dé)说(shuō)清(qīng)楚(chǔ)。(。)”(”)狗(gǒu)熊(xióng)捶(chuí)捶(chuí)自(zì)己(jǐ)的(de)脑(nǎo)袋(dài)，(，)说(shuō)：(：)“(“)我(wǒ)怎(zěn)么(me)没(méi)问(wèn)清(qīng)楚(chǔ)呢(ne)？(？)”(”)于(yú)是(shì)又(yòu)去(qù)问(wèn)老(lǎo)虎(hǔ)。(。)“(“)哎(āi)呀(ya)！(！)忘(wàng)了(le)说(shuō)地(dì)点(diǎn)。(。)大(dà)会(huì)在(zài)森(sēn)林(lín)广(guǎng)场(chǎng)开(kāi)，(，)你(nǐ)再(zài)去(qù)通(tōng)知(zhī)大(dà)家(jiā)吧(ba)！(！)”(”)老(lǎo)虎(hǔ)对(duì)狗(gǒu)熊(xióng)说(shuō)。(。)“(“)请(qǐng)注(zhù)意(yì)啦(la)！(！)”(”)狗(gǒu)熊(xióng)又(yòu)用(yòng)喇(lǎ)叭(bā)大(dà)声(shēng)喊(hǎn)，(，)“(“)明(míng)天(tiān)上(shàng)午(wǔ)八(bā)点(diǎn)，(，)在(zài)森(sēn)林(lín)广(guǎng)场(chǎng)开(kāi)大(dà)会(huì)，(，)请(qǐng)大(dà)家(jiā)准(zhǔn)时(shí)参(cān)加(jiā)！(！)”(”)一(yī)连(lián)喊(hǎn)了(le)十(shí)遍(biàn)。(。)这(zhè)一(yī)次(cì)，(，)大(dà)家(jiā)都(dōu)明(míng)白(bái)了(le)。(。)第(dì)二(èr)天(tiān)上(shàng)午(wǔ)，(，)动(dòng)物(wù)们(men)都(dōu)来(lái)到(dào)森(sēn)林(lín)广(guǎng)场(chǎng)，(，)准(zhǔn)时(shí)参(cān)加(jiā)了(le)大(dà)会(huì)。(。)"
+    },
+    {
+        "name": "小猴子下山",
+        "trans": [],
+        "title": "小猴子下山",
+        "author": "佚名",
+        "notation": "有(yǒu)一(yī)天(tiān)，(，)小(xiǎo)猴(hóu)子(zi)下(xià)山(shān)来(lái)，(，)走(zǒu)到(dào)一(yī)块(kuài)玉(yù)米(mǐ)地(dì)里(lǐ)。(。)他(tā)看(kàn)见(jiàn)玉(yù)米(mǐ)结(jié)得(dé)又(yòu)大(dà)又(yòu)多(duō)，(，)非(fēi)常(cháng)高(gāo)兴(xīng)，(，)就(jiù)掰(bāi)了(le)一(yī)个(gè)，(，)扛(káng)着(zhe)往(wǎng)前(qián)走(zǒu)。(。)小(xiǎo)猴(hóu)子(zi)扛(káng)着(zhe)玉(yù)米(mǐ)，(，)走(zǒu)到(dào)一(yī)棵(kē)桃(táo)树(shù)下(xià)。(。)他(tā)看(kàn)见(jiàn)满(mǎn)树(shù)的(de)桃(táo)子(zi)又(yòu)大(dà)又(yòu)红(hóng)，(，)非(fēi)常(cháng)高(gāo)兴(xīng)，(，)就(jiù)扔(rēng)了(le)玉(yù)米(mǐ)，(，)去(qù)摘(zhāi)桃(táo)子(zi)。(。)小(xiǎo)猴(hóu)子(zi)捧(pěng)着(zhe)几(jǐ)个(gè)桃(táo)子(zi)，(，)走(zǒu)到(dào)一(yī)片(piàn)瓜(guā)地(dì)里(lǐ)。(。)他(tā)看(kàn)见(jiàn)满(mǎn)地(dì)的(de)西(xī)瓜(guā)又(yòu)大(dà)又(yòu)圆(yuán)，(，)非(fēi)常(cháng)高(gāo)兴(xīng)，(，)就(jiù)扔(rēng)了(le)桃(táo)子(zi)，(，)去(qù)摘(zhāi)西(xī)瓜(guā)。(。)小(xiǎo)猴(hóu)子(zi)抱(bào)着(zhe)一(yī)个(gè)大(dà)西(xī)瓜(guā)往(wǎng)回(huí)走(zǒu)。(。)走(zǒu)着(zhe)走(zǒu)着(zhe)，(，)他(tā)看(kàn)见(jiàn)一(yī)只(zhǐ)小(xiǎo)兔(tù)子(zi)蹦(bèng)蹦(bèng)跳(tiào)跳(tiào)的(de)，(，)真(zhēn)可(kě)爱(ài)，(，)就(jiù)扔(rēng)了(le)西(xī)瓜(guā)，(，)去(qù)追(zhuī)小(xiǎo)兔(tù)子(zi)。(。)小(xiǎo)兔(tù)子(zi)跑(pǎo)进(jìn)树(shù)林(lín)里(lǐ)，(，)不(bù)见(jiàn)了(le)。(。)小(xiǎo)猴(hóu)子(zi)只(zhǐ)好(hǎo)空(kōng)着(zhe)手(shǒu)回(huí)家(jiā)去(qù)。(。)"
+    },
+    {
+        "name": "棉花姑娘",
+        "trans": [],
+        "title": "棉花姑娘",
+        "author": "佚名",
+        "notation": "棉(mián)花(huā)姑(gū)娘(niáng)生(shēng)病(bìng)了(le)，(，)叶(yè)子(zi)上(shàng)有(yǒu)许(xǔ)多(duō)可(kě)恶(è)的(de)蚜(yá)虫(chóng)。(。)她(tā)多(duō)么(me)盼(pàn)望(wàng)有(yǒu)医(yī)生(shēng)来(lái)给(gěi)她(tā)治(zhì)病(bìng)啊(a)！(！)燕(yàn)子(zi)飞(fēi)来(lái)了(le)。(。)棉(mián)花(huā)姑(gū)娘(niáng)说(shuō)：(：)“(“)请(qǐng)你(nǐ)帮(bāng)我(wǒ)捉(zhuō)害(hài)虫(chóng)吧(ba)！(！)”(”)燕(yàn)子(zi)说(shuō)：(：)“(“)对(duì)不(bù)起(qǐ)，(，)我(wǒ)只(zhǐ)会(huì)捉(zhuō)空(kōng)中(zhōng)飞(fēi)的(de)害(hài)虫(chóng)，(，)你(nǐ)还(hái)是(shì)请(qǐng)别(bié)人(rén)帮(bāng)忙(máng)吧(ba)！(！)”(”)啄(zhuó)木(mù)鸟(niǎo)飞(fēi)来(lái)了(le)。(。)棉(mián)花(huā)姑(gū)娘(niáng)说(shuō)：(：)“(“)请(qǐng)你(nǐ)帮(bāng)我(wǒ)捉(zhuō)害(hài)虫(chóng)吧(ba)！(！)”(”)啄(zhuó)木(mù)鸟(niǎo)说(shuō)：(：)“(“)对(duì)不(bù)起(qǐ)，(，)我(wǒ)只(zhǐ)会(huì)捉(zhuō)树(shù)干(gàn)里(lǐ)的(de)害(hài)虫(chóng)，(，)你(nǐ)还(hái)是(shì)请(qǐng)别(bié)人(rén)帮(bāng)忙(máng)吧(ba)！(！)”(”)青(qīng)蛙(wā)跳(tiào)来(lái)了(le)。(。)棉(mián)花(huā)姑(gū)娘(niáng)高(gāo)兴(xīng)地(dì)说(shuō)：(：)“(“)请(qǐng)你(nǐ)帮(bāng)我(wǒ)捉(zhuō)害(hài)虫(chóng)吧(ba)！(！)”(”)青(qīng)蛙(wā)说(shuō)：(：)“(“)对(duì)不(bù)起(qǐ)，(，)我(wǒ)只(zhǐ)会(huì)捉(zhuō)水(shuǐ)田(tián)里(lǐ)的(de)害(hài)虫(chóng)，(，)你(nǐ)还(hái)是(shì)请(qǐng)别(bié)人(rén)帮(bāng)忙(máng)吧(ba)！(！)”(”)忽(hū)然(rán)，(，)一(yī)群(qún)圆(yuán)圆(yuán)的(de)小(xiǎo)虫(chóng)子(zi)飞(fēi)来(lái)了(le)，(，)很(hěn)快(kuài)就(jiù)把(bǎ)蚜(yá)虫(chóng)吃(chī)光(guāng)了(le)。(。)棉(mián)花(huā)姑(gū)娘(niáng)惊(jīng)奇(qí)地(dì)问(wèn)：(：)“(“)你(nǐ)们(men)是(shì)谁(shuí)呀(ya)？(？)”(”)小(xiǎo)虫(chóng)子(zi)说(shuō)：(：)“(“)我(wǒ)们(men)身(shēn)上(shàng)有(yǒu)七(qī)个(gè)斑(bān)点(diǎn)，(，)就(jiù)像(xiàng)七(qī)颗(kē)星(xīng)星(xīng)，(，)大(dà)家(jiā)叫(jiào)我(wǒ)们(men)七(qī)星(xīng)瓢(piáo)虫(chóng)。(。)”(”)不(bù)久(jiǔ)，(，)棉(mián)花(huā)姑(gū)娘(niáng)的(de)病(bìng)好(hǎo)了(le)，(，)长(zhǎng)出(chū)了(le)碧(bì)绿(lǜ)碧(bì)绿(lǜ)的(de)叶(yè)子(zi)，(，)吐(tǔ)出(chū)了(le)雪(xuě)白(bái)雪(xuě)白(bái)的(de)棉(mián)花(huā)。(。)她(tā)咧(liě)开(kāi)嘴(zuǐ)笑(xiào)啦(la)！(！)"
     }
 ]
